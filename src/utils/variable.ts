@@ -130,12 +130,14 @@ export const initItemStatus = {
     weapon: Array(8).fill(0),
     armor: Array(5).fill(0),
     e: Array(1).fill(0),
+    b: Array(5).fill(0),
   },
   'x2': {
     bosses: Array(8).fill(0),
     weapon: Array(8).fill(0),
     armor: Array(5).fill(0),
     e: Array(1).fill(0),
+    b: Array(5).fill(0),
     zero: Array(3).fill(0)
   },
   'x3': {
@@ -143,20 +145,16 @@ export const initItemStatus = {
     weapon: Array(8).fill(0),
     armor: Array(5).fill(0),
     e: Array(1).fill(0),
+    b: Array(5).fill(0),
     subbosses: Array(3).fill(0),
     ridearmor: Array(4).fill(0)
   },
   'miscellaneous': {
     hp: Array(1).fill(0),
     wp: Array(1).fill(0),
-    b: Array(1).fill(0),
-    ba: Array(1).fill(0),
-    br: Array(1).fill(0),
-    bd: Array(1).fill(0),
-    bc: Array(1).fill(0),
     sigma: Array(1).fill(0),
-    d: Array(4).fill(0),
-    igf: Array(4).fill(0),
+    d: Array(1).fill(0),
+    igf: Array(1).fill(0),
   },
   'title': Array(1).fill(0)
 }
@@ -169,7 +167,7 @@ export const addressMapping = {
       // sc
       ['1ItKeySC', '1ChSCClear', '1ItStageVariedSC'],
       // aa
-      ['1ItKeyAA', '1ChAAClear', ''],
+      ['1ItKeyAA', '1ChAAClear'],
       // bn/fm
       ['1ItKeyBN', '1ChBNClear', '1ItStageVariedBN'],
       // se
@@ -201,18 +199,25 @@ export const addressMapping = {
     ],
     'armor': [
       // head
-      ['1ItHeadPart', '1ItHeadChip'],
+      ['1ItHeadPart', '', '', '1ItHeadChip'],
       // arm
-      ['1ItArmPart', '1ItArmChip'],
+      ['1ItArmPart', '', '', '1ItArmChip'],
       // body
-      ['1ItBodyPart', '1ItBodyChip'],
+      ['1ItBodyPart', '', '', '1ItBodyChip'],
       // foot
-      ['1ItFootPart', '1ItFootChip'],
+      ['1ItFootPart', '', '', '1ItFootChip'],
       // hadou
       ['1ItHadouken']
     ],
     'e': [
       [['1ItSubtank1', '1ItSubtank2', '1ItSubtank3', '1ItSubtank4']]
+    ],
+    'b': [
+      [['1ItBusterAmmo1', '1ItBusterAmmo2', '1ItBusterAmmo3', '1ItBusterAmmo4', '1ItBusterAmmo5',]],
+      [['1ItBusterAttack100', '1ItBusterAttack150',]],
+      [['1ItBusterFireRate3', '1ItBusterFireRate4', '1ItBusterFireRate5', '1ItBusterFireRate6', '1ItBusterFireRate30', '1ItBusterFireRate60',]],
+      [['1ItBusterDashShot1', '1ItBusterDashShotUnlimited',]],
+      [['1ItCharge75', '1ItCharge100', '1ItCharge125', '1ItCharge150',]],
     ],
   },
   'x2': {
@@ -254,18 +259,25 @@ export const addressMapping = {
     ],
     'armor': [
       // head
-      ['2ItHeadPart', '2ItHeadChip'],
+      ['2ItHeadPart', '', '', '2ItHeadChip'],
       // arm
-      ['2ItArmPart', '2ItArmChip'],
+      ['2ItArmPart', '', '', '2ItArmChip'],
       // body
-      ['2ItBodyPart', '2ItBodyChip'],
+      ['2ItBodyPart', '', '', '2ItBodyChip'],
       // foot
-      ['2ItFootPart', '2ItFootChip'],
+      ['2ItFootPart', '', '', '2ItFootChip'],
       // shoryu
       ['2ItShoryuken'],
     ],
     'e': [
       [['2ItSubtank1', '2ItSubtank2', '2ItSubtank3', '2ItSubtank4']]
+    ],
+    'b': [
+      [['2ItBusterAmmo1', '2ItBusterAmmo2', '2ItBusterAmmo3', '2ItBusterAmmo4', '2ItBusterAmmo5',]],
+      [['2ItBusterAttack100', '2ItBusterAttack150',]],
+      [['2ItBusterFireRate3', '2ItBusterFireRate4', '2ItBusterFireRate5', '2ItBusterFireRate6', '2ItBusterFireRate30', '2ItBusterFireRate60',]],
+      [['2ItBusterDashShot1', '2ItBusterDashShotUnlimited',]],
+      [['2ItCharge75', '2ItCharge100', '2ItCharge125', '2ItCharge150',]],
     ],
     'zero': [
       // head
@@ -315,18 +327,25 @@ export const addressMapping = {
     ],
     'armor': [
       // head
-      ['3ItHeadPart', '3ItHeadChip'],
+      ['3ItHeadPart', '', '', '3ItHeadChip'],
       // arm
-      ['3ItArmPart', '3ItArmChip'],
+      ['3ItArmPart', '', '', '3ItArmChip'],
       // body
-      ['3ItBodyPart', '3ItBodyChip'],
+      ['3ItBodyPart', '', '', '3ItBodyChip'],
       // foot
-      ['3ItFootPart', '3ItFootChip'],
+      ['3ItFootPart', '', '', '3ItFootChip'],
       // saber
       ['3ItSaber'],
     ],
     'e': [
       [['3ItSubtank1', '3ItSubtank2', '3ItSubtank3', '3ItSubtank4']]
+    ],
+    'b': [
+      [['3ItBusterAmmo1', '3ItBusterAmmo2', '3ItBusterAmmo3', '3ItBusterAmmo4', '3ItBusterAmmo5',]],
+      [['3ItBusterAttack100', '3ItBusterAttack150',]],
+      [['3ItBusterFireRate3', '3ItBusterFireRate4', '3ItBusterFireRate5', '3ItBusterFireRate6', '3ItBusterFireRate30', '3ItBusterFireRate60',]],
+      [['3ItBusterDashShot1', '3ItBusterDashShotUnlimited',]],
+      [['3ItCharge75', '3ItCharge100', '3ItCharge125', '3ItCharge150',]],
     ],
     'subbosses': [
       // vff/bit
@@ -364,41 +383,6 @@ export const addressMapping = {
         '2ItEnergyUp1', '2ItEnergyUp2', '2ItEnergyUp3', '2ItEnergyUp4', '2ItEnergyUp5', '2ItEnergyUp6', '2ItEnergyUp7', '2ItEnergyUp8', '2ItEnergyUp9', '2ItEnergyUp10', '2ItEnergyUp11', '2ItEnergyUp12', '2ItEnergyUp13', '2ItEnergyUp14',
         '3ItEnergyUp1', '3ItEnergyUp2', '3ItEnergyUp3', '3ItEnergyUp4', '3ItEnergyUp5', '3ItEnergyUp6', '3ItEnergyUp7', '3ItEnergyUp8', '3ItEnergyUp9', '3ItEnergyUp10', '3ItEnergyUp11', '3ItEnergyUp12', '3ItEnergyUp13', '3ItEnergyUp14',
       ]]
-    ],
-    'b': [
-      [
-        ['1ItBusterAmmo1', '1ItBusterAmmo2', '1ItBusterAmmo3', '1ItBusterAmmo4', '1ItBusterAmmo5',],
-        ['2ItBusterAmmo1', '2ItBusterAmmo2', '2ItBusterAmmo3', '2ItBusterAmmo4', '2ItBusterAmmo5',],
-        ['3ItBusterAmmo1', '3ItBusterAmmo2', '3ItBusterAmmo3', '3ItBusterAmmo4', '3ItBusterAmmo5',]
-      ]
-    ],
-    'ba': [
-      [
-        ['1ItBusterAttack100', '1ItBusterAttack150',],
-        ['2ItBusterAttack100', '2ItBusterAttack150',],
-        ['3ItBusterAttack100', '3ItBusterAttack150',],
-      ]
-    ],
-    'br': [
-      [
-        ['1ItBusterFireRate30', '1ItBusterFireRate3', '1ItBusterFireRate4', '1ItBusterFireRate5', '1ItBusterFireRate60', '1ItBusterFireRate6',],
-        ['2ItBusterFireRate30', '2ItBusterFireRate3', '2ItBusterFireRate4', '2ItBusterFireRate5', '2ItBusterFireRate60', '2ItBusterFireRate6',],
-        ['3ItBusterFireRate30', '3ItBusterFireRate3', '3ItBusterFireRate4', '3ItBusterFireRate5', '3ItBusterFireRate60', '3ItBusterFireRate6',]
-      ]
-    ],
-    'bd': [
-      [[
-        '1ItBusterDashShot1', '1ItBusterDashShotUnlimited',
-        '2ItBusterDashShot1', '2ItBusterDashShotUnlimited',
-        '3ItBusterDashShot1', '3ItBusterDashShotUnlimited',
-      ]]
-    ],
-    'bc': [
-      [
-        ['1ItCharge100', '1ItCharge125', '1ItCharge150', '1ItCharge75',],
-        ['2ItCharge100', '2ItCharge125', '2ItCharge150', '2ItCharge75',],
-        ['3ItCharge100', '3ItCharge125', '3ItCharge150', '3ItCharge75',]
-      ]
     ],
     'sigma': [
       [[
@@ -632,8 +616,9 @@ export interface X1ImgSource {
 export interface X1ItemStatus {
   bosses: boolean[]
   weapon: boolean[]
-  armor: boolean[],
-  e: number[],
+  armor: boolean[]
+  e: number[]
+  b: number[]
 }
 
 export interface X2ImgSource {
@@ -647,6 +632,7 @@ export interface X2ItemStatus {
   weapon: boolean[]
   armor: boolean[]
   e: number[]
+  b: number[]
   zero: boolean[]
 }
 
@@ -662,6 +648,7 @@ export interface X3ItemStatus {
   weapon: boolean[]
   armor: boolean[]
   e: number[]
+  b: number[]
   subbosses: boolean[]
   ridearmor: boolean[]
 }
@@ -671,10 +658,6 @@ export interface MiscellaneousImgSource {
   hp: string,
   wp: string,
   b: string,
-  ba: string,
-  br: string,
-  bd: string,
-  bc: string,
   d: string,
   igf: string,
 }
@@ -682,10 +665,6 @@ export interface MiscellaneousItemStatus {
   sigma: number[],
   hp: number[],
   wp: number[],
-  b: number[],
-  ba: number[],
-  br: number[],
-  bd: number[],
-  bc: number[],
+  d: number[],
   igf: number[],
 }
