@@ -59,9 +59,9 @@ export const imgSourceObject = {
       'x2_x_shoryuken.png'
     ],
     'zero': [
-      'x2_zero_head.png',
-      'x2_zero_body.png',
-      'x2_zero_foot.png',
+      'x2_zero_head.ico',
+      'x2_zero_body.ico',
+      'x2_zero_foot.ico',
     ]
   },
   'x3': {
@@ -105,22 +105,22 @@ export const imgSourceObject = {
     ],
   },
   'miscellaneous': {
-    'hp': 'heart.gif',
-    'wp': 'energy.gif',
+    'hp': 'heart.png',
+    'wp': 'energy.png',
     'b': 'buster.png',
     'ba': 'buster_atk.png',
     'bd': 'buster_dash.png',
     'br': 'buster_rate.png',
     'bc': 'buster_charge.gif',
-    'e': 'etank.gif',
+    'e': 'etank.png',
     'd': 'deaths.png',
     'igf': 'igf.png',
     'sigma': 'sigma.png',
   },
   'title': {
-    'x1': 'title_x1.png',
-    'x2': 'title_x2.png',
-    'x3': 'title_x3.png',
+    'x1': 'title_x1.ico',
+    'x2': 'title_x2.ico',
+    'x3': 'title_x3.ico',
   }
 }
 
@@ -225,4 +225,5 @@ export interface MiscellaneousItemStatus {
   br: number[],
   bd: number[],
   bc: number[],
+  igf: number[],
 }
