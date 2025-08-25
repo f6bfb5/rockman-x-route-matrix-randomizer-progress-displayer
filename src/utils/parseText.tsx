@@ -35,9 +35,8 @@ function populateInitItemStatus(
           }
         });
 
-        const finalValue = values.length === 1 ? values[0] : values;
-        // console.log(`${itemKey}[${i}]`, finalValue)
-        targetObject[game][itemKey][i] = finalValue;
+        // console.log(itemKey, itemIDs, values)
+        targetObject[game][itemKey][i] = values;
       }
     }
   }
