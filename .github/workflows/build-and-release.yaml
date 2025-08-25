@@ -15,7 +15,7 @@ jobs:
           npm run build
       - uses: montudor/action-zip@v1
         with:
-          args: zip -qq -r RouteMatriXRandomizer_progress_displayer_v0.0.2.zip dist/*
+          args: zip -qq -r RouteMatriXRandomizer_progress_displayer_v0.0.2.zip ./dist/*
       - name: Release
         uses: ncipollo/release-action@v1
         with:

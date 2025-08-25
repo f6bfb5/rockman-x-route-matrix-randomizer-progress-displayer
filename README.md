@@ -5,7 +5,7 @@ Still WIP
 ## 使用方式
 
 1. 從Releases下載`RouteMatriXRandomizer_progress_displayer.zip`
-2. 和`RouteMatriXRandomizer_progress_tracker.zip`一同解壓縮到`boot.lua`所在位置
+2. 和[RouteMatriXRandomizer_progress_tracker.zip](https://github.com/fsworld009/Route-MatriX-Randomizer_progress_tracker/)一同解壓縮到`boot.lua`所在位置
 3. 遊戲執行後，在OBS的瀏覽器來源中勾選本機檔案，選擇解壓縮後的`index.html`
 4. 尺寸（瀏覽器來源屬性內的寬度和高度）可依需求自行設定，圖示和文字大小會隨尺寸響應變化
 
