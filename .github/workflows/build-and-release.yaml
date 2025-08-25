@@ -15,10 +15,10 @@ jobs:
           npm run build
       - uses: montudor/action-zip@v1
         with:
-          args: zip -qq -r RouteMatriXRandomizer_progress_displayer_v0.0.1.zip dist
+          args: zip -qq -r RouteMatriXRandomizer_progress_displayer_v0.0.2.zip dist/.
       - name: Release
         uses: ncipollo/release-action@v1
         with:
-          artifacts: "RouteMatriXRandomizer_progress_displayer_v0.0.1.zip"
+          artifacts: "RouteMatriXRandomizer_progress_displayer_v0.0.2.zip"
           token: ${{ secrets.GITHUB_TOKEN }}
-          tag: 'v0.0.1'
+          tag: 'v0.0.2'
