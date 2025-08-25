@@ -155,8 +155,8 @@ export const initItemStatus = {
     sigma: Array(1).fill(0),
     d: Array(1).fill(0),
     igf: Array(1).fill(0),
+    title: Array(1).fill(0),
   },
-  'title': Array(1).fill(0)
 }
 export const addressMapping = {
   'x1': {
@@ -392,9 +392,9 @@ export const addressMapping = {
       ]]
     ],
     'd': [],
-    'igf': [],
+    'igf': [['SIfg']],
+    'title': [['SCurrentGame']],
   },
-  'title': ['']
 }
 // export const addressMapping = {
 //   'x1': {

@@ -1,4 +1,4 @@
-import { createSignal, onMount } from 'solid-js'
+import { createSignal, Switch, Match, onMount } from 'solid-js'
 import { recordFilePath, initItemStatus } from './utils/variable'
 import parseText from './utils/parseText'
 
@@ -28,13 +28,21 @@ function App() {
       {/* <div class="grid-cols-8 grid-cols-9 grid-cols-10 bg-[url()]">
         {itemStatus().x1.e[0]}
       </div> */}
-      <X1 itemStatus={itemStatus().x1} />
-      <div class="mt-1"></div>
-      <X2 itemStatus={itemStatus().x2} />
-      <div class="mt-1"></div>
-      <X3 itemStatus={itemStatus().x3} />
-      <div class="mt-1"></div>
-      <Miscellaneous itemStatus={itemStatus().miscellaneous} />
+      <Switch fallback={<></>}>
+        <Match when={itemStatus().miscellaneous.title[0] == 1}>
+          <X1 itemStatus={itemStatus().x1} />
+          <div class="mt-1"></div>
+        </Match>
+        <Match when={itemStatus().miscellaneous.title[0] == 2}>
+          <X2 itemStatus={itemStatus().x2} />
+          <div class="mt-1"></div>
+        </Match>
+        <Match when={itemStatus().miscellaneous.title[0] == 3}>
+          <X3 itemStatus={itemStatus().x3} />
+          <div class="mt-1"></div>
+        </Match>
+        <Miscellaneous itemStatus={itemStatus().miscellaneous} />
+      </Switch>
     </>
   )
 }
