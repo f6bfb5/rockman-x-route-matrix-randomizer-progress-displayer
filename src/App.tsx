@@ -25,7 +25,7 @@ function App() {
 
   return (
     <>
-      {/* <div class="grid-cols-8 grid-cols-10 bg-[url()]">
+      {/* <div class="grid-cols-8 grid-cols-9 grid-cols-10 bg-[url()]">
         {itemStatus().x1.e[0]}
       </div> */}
       <X1 itemStatus={itemStatus().x1} />

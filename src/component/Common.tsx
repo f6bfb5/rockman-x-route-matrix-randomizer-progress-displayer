@@ -1,4 +1,4 @@
-import { For, children, type JSX } from 'solid-js'
+import { For, Show, children, type JSX } from 'solid-js'
 import { imgBasePath, imgSourceObject } from '../utils/variable'
 
 import GridContainer from './GridContainer'
@@ -18,6 +18,7 @@ function Common(props: {
   const imgSource = imgSourceMap[props.title]
 
   const e = imgSourceObject.miscellaneous.e
+  const b = imgSourceObject.miscellaneous.b
 
   const titleMap: { [key: string]: string } = {
     'x1': imgSourceObject.title.x1,
@@ -32,45 +33,63 @@ function Common(props: {
 
   return (
     <>
-      <GridContainer cols={8}>
+      <GridContainer cols={9}>
+        <ItemImage source={`${imgBasePath}${title}`} />
+
         {/* Bosses */}
         <For each={imgSource.bosses}>{(boss, i) =>
           <>
             <ItemImage
               source={`${imgBasePath}${boss}`}
-              unlocked={itemStatus().bosses[i()]}
-              beaten={itemStatus().bosses[i()]}
-              changed={itemStatus().bosses[i()]} />
+              itemStatus={itemStatus().bosses[i()]}
+            />
           </>
         }</For>
+
+        {/* Armor */}
+        <div class="relative">
+          <ItemImage source={`${imgBasePath}x.png`} />
+          <For each={imgSource.armor}>{(armor, i) =>
+            <Show
+              when={i() < 4 && itemStatus().armor[i()][0]}
+              fallback={<></>}
+            >
+              <div class="absolute left-0 top-0 size-[100%]">
+                <ItemImage source={`${imgBasePath}${armor}`} />
+              </div>
+            </Show>
+          }</For>
+        </div>
 
         {/* Weapon */}
         <For each={imgSource.weapon}>{(weapon, i) =>
           <ItemImage
             source={`${imgBasePath}${weapon}`}
-            unlocked={itemStatus().weapon[i()]}
-            beaten={itemStatus().weapon[i()]}
-            changed={itemStatus().weapon[i()]} />
+            itemStatus={itemStatus().weapon[i()]}
+          />
         }</For>
 
-        {/* Armor */}
-        <For each={imgSource.armor}>{(armor, i) =>
-          <ItemImage source={`${imgBasePath}${armor}`}
-            unlocked={itemStatus().armor[i()]}
-            // beaten={itemStatus().armor[i()]}
-            beaten={false}
-            changed={itemStatus().armor[i()]} />
-        }</For>
+        {/* Children */}
+        {c()}
+      </GridContainer >
+
+      <GridContainer cols={'9'}>
+        {/* Special Armor */}
+        <ItemImage
+          source={`${imgBasePath}${imgSource.armor[4]}`}
+          itemStatus={itemStatus().armor[4]} />
 
         {/* E Tank */}
-        <ItemImage source={`${imgBasePath}${e}`}
-          unlocked={true} beaten={false} changed={false} />
-        <Text text={itemStatus().e[0]} />
+        <div class="relative">
+          <ItemImage source={`${imgBasePath}${e}`} />
+          <div class="absolute size-[100%] left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] flex justify-center">
+            <Text text={itemStatus().e[0]} />
+          </div>
+        </div>
 
-        <ItemImage source={`${imgBasePath}${title}`}
-          unlocked={true} beaten={false} changed={false} />
-
-        {c()}
+        {/* Buster */}
+        <ItemImage source={`${imgBasePath}${b}`} />
+        <Text text={`${itemStatus().b[0]}/${itemStatus().b[1]}/${itemStatus().b[2]}/${itemStatus().b[3]}/${itemStatus().b[4]}`} />
       </GridContainer>
     </>
   )

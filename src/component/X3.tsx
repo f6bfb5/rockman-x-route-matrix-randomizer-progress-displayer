@@ -18,17 +18,15 @@ function X3(props: {
         {/* Subbosses */}
         <For each={imgSource.subbosses}>{(subbosses, i) =>
           <ItemImage source={`${imgBasePath}${subbosses}`}
-            unlocked={itemStatus().subbosses[i()]}
-            beaten={false}
-            changed={itemStatus().subbosses[i()]} />
+            itemStatus={itemStatus().subbosses[i()]}
+          />
         }</For>
 
         {/* Ride Armor */}
         <For each={imgSource.ridearmor}>{(ridearmor, i) =>
           <ItemImage source={`${imgBasePath}${ridearmor}`}
-            unlocked={itemStatus().ridearmor[i()]}
-            beaten={false}
-            changed={itemStatus().ridearmor[i()]} />
+            itemStatus={itemStatus().ridearmor[i()]}
+          />
         }</For>
       </Common>
     </>

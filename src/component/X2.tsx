@@ -18,9 +18,8 @@ function X2(props: {
         {/* Zero */}
         <For each={imgSource.zero}>{(zero, i) =>
           <ItemImage source={`${imgBasePath}${zero}`}
-            unlocked={itemStatus().zero[i()]}
-            beaten={false}
-            changed={itemStatus().zero[i()]} />
+            itemStatus={itemStatus().zero[i()]}
+          />
         }</For>
       </Common>
     </>
