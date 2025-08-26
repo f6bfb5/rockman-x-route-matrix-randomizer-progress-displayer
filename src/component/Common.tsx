@@ -89,7 +89,17 @@ function Common(props: {
 
         {/* Buster */}
         <ItemImage source={`${imgBasePath}${b}`} />
-        <Text text={`${itemStatus().b[0]}/${itemStatus().b[1]}/${itemStatus().b[2]}/${itemStatus().b[3]}/${itemStatus().b[4]}`} />
+        <div class="relative size-[100%]">
+          <div class="absolute size-[100%] left-[100%] top-[50%] translate-y-[-50%] flex justify-center">
+            <Text text={`${itemStatus().b[0]}/${itemStatus().b[1]}/${itemStatus().b[2]}/${itemStatus().b[3]}/${itemStatus().b[4]}`} />
+          </div>
+        </div>
+        {/* <div class="relative size-[100%]">
+          <div class="absolute top-[-10%] size-[100%] flex flex-col items-center justify-center scale-[.5]">
+            <Text text={`attack`} />
+            <Text text={`${itemStatus().b[0]}`} />
+          </div>
+        </div> */}
       </GridContainer>
     </>
   )

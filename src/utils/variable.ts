@@ -608,6 +608,246 @@ export const addressMapping = {
 //   'title': ['']
 // }
 
+// TODO
+export const translationMapping = {
+  'x1': {
+    'bosses': [
+      // unlocked, beaten, changed
+      // lo
+      ['1ItKeyLO', '1ChLOClear'],
+      // sc
+      ['1ItKeySC', '1ChSCClear', '1ItStageVariedSC'],
+      // aa
+      ['1ItKeyAA', '1ChAAClear'],
+      // bn/fm
+      ['1ItKeyBN', '1ChBNClear', '1ItStageVariedBN'],
+      // se
+      ['1ItKeySE', '1ChSEClear'],
+      // sm
+      ['1ItKeySM', '1ChSMClear', '1ItStageVariedSM'],
+      // bk
+      ['1ItKeyBK', '1ChBKClear'],
+      // ip/cp
+      ['1ItKeyIP', '1ChIPClear']
+    ],
+    'weapon': [
+      // lo
+      ['1ItWeaponLO'],
+      // sc
+      ['1ItWeaponSC'],
+      // aa
+      ['1ItWeaponAA'],
+      // bn/fm
+      ['1ItWeaponBN'],
+      // se
+      ['1ItWeaponSE'],
+      // sm
+      ['1ItWeaponSM'],
+      // bk
+      ['1ItWeaponBK'],
+      // ip/cp
+      ['1ItWeaponIP']
+    ],
+    'armor': [
+      // head
+      ['1ItHeadPart', '', '', '1ItHeadChip'],
+      // arm
+      ['1ItArmPart', '', '', '1ItArmChip'],
+      // body
+      ['1ItBodyPart', '', '', '1ItBodyChip'],
+      // foot
+      ['1ItFootPart', '', '', '1ItFootChip'],
+      // hadou
+      ['1ItHadouken']
+    ],
+    'e': [
+      [['1ItSubtank1', '1ItSubtank2', '1ItSubtank3', '1ItSubtank4']]
+    ],
+    'b': [
+      [['1ItBusterAmmo1', '1ItBusterAmmo2', '1ItBusterAmmo3', '1ItBusterAmmo4', '1ItBusterAmmo5',]],
+      [['1ItBusterAttack100', '1ItBusterAttack150',]],
+      [['1ItBusterFireRate3', '1ItBusterFireRate4', '1ItBusterFireRate5', '1ItBusterFireRate6', '1ItBusterFireRate30', '1ItBusterFireRate60',]],
+      [['1ItBusterDashShot1', '1ItBusterDashShotUnlimited',]],
+      [['1ItCharge75', '1ItCharge100', '1ItCharge125', '1ItCharge150',]],
+    ],
+  },
+  'x2': {
+    'bosses': [
+      // mm
+      ['2ItKeyMM', '2ChMMClear'],
+      // wh/ws
+      ['2ItKeyWH', '2ChWHClear'],
+      // bc
+      ['2ItKeyBC', '2ChBCClear'],
+      // fs
+      ['2ItKeyFS', '2ChFSClear'],
+      // mh/mc
+      ['2ItKeyMH', '2ChMHClear'],
+      // cm/cs
+      ['2ItKeyCM', '2ChCMClear'],
+      // so,oo
+      ['2ItKeySO', '2ChSOClear'],
+      // wa/wg
+      ['2ItKeyWA', '2ChWAClear'],
+    ],
+    'weapon': [
+      // mm
+      ['2ItWeaponMM'],
+      // wh/ws
+      ['2ItWeaponWH'],
+      // bc
+      ['2ItWeaponBC'],
+      // fs
+      ['2ItWeaponFS'],
+      // mh/mc
+      ['2ItWeaponMH'],
+      // cm/cs
+      ['2ItWeaponCM'],
+      // so,oo
+      ['2ItWeaponSO'],
+      // wa/wg
+      ['2ItWeaponWA'],
+    ],
+    'armor': [
+      // head
+      ['2ItHeadPart', '', '', '2ItHeadChip'],
+      // arm
+      ['2ItArmPart', '', '', '2ItArmChip'],
+      // body
+      ['2ItBodyPart', '', '', '2ItBodyChip'],
+      // foot
+      ['2ItFootPart', '', '', '2ItFootChip'],
+      // shoryu
+      ['2ItShoryuken'],
+    ],
+    'e': [
+      [['2ItSubtank1', '2ItSubtank2', '2ItSubtank3', '2ItSubtank4']]
+    ],
+    'b': [
+      [['2ItBusterAmmo1', '2ItBusterAmmo2', '2ItBusterAmmo3', '2ItBusterAmmo4', '2ItBusterAmmo5',]],
+      [['2ItBusterAttack100', '2ItBusterAttack150',]],
+      [['2ItBusterFireRate3', '2ItBusterFireRate4', '2ItBusterFireRate5', '2ItBusterFireRate6', '2ItBusterFireRate30', '2ItBusterFireRate60',]],
+      [['2ItBusterDashShot1', '2ItBusterDashShotUnlimited',]],
+      [['2ItCharge75', '2ItCharge100', '2ItCharge125', '2ItCharge150',]],
+    ],
+    'zero': [
+      // head
+      ['2ItZeroFHead'],
+      // body
+      ['2ItZeroBody'],
+      // foot
+      ['2ItZeroFoot'],
+    ]
+  },
+  'x3': {
+    'bosses': [
+      // eh/bh
+      ['3ItKeyEH', '3ChEHClear', '3ItStageVariedEH'],
+      // fb/bb
+      ['3ItKeyFB', '3ChFBClear', '3ItStageVariedFB'],
+      // gb
+      ['3ItKeyGB', '3ChGBClear', '3ItStageVariedGB'],
+      // as/ts
+      ['3ItKeyAS', '3ChASClear'],
+      // en/vc
+      ['3ItKeyEN', '3ChENClear'],
+      // ss/cc
+      ['3ItKeySS', '3ChSSClear'],
+      // sm/tr
+      ['3ItKeySM', '3ChSMClear'],
+      // st/nt
+      ['3ItKeyST', '3ChSTClear'],
+    ],
+    'weapon': [
+      // eh/bh
+      ['3ItWeaponEH'],
+      // fb/bb
+      ['3ItWeaponFB'],
+      // gb
+      ['3ItWeaponGB'],
+      // as/ts
+      ['3ItWeaponAS'],
+      // en/vc
+      ['3ItWeaponEN'],
+      // ss/cc
+      ['3ItWeaponSS'],
+      // sm/tr
+      ['3ItWeaponSM'],
+      // st/nt
+      ['3ItWeaponST'],
+    ],
+    'armor': [
+      // head
+      ['3ItHeadPart', '', '', '3ItHeadChip'],
+      // arm
+      ['3ItArmPart', '', '', '3ItArmChip'],
+      // body
+      ['3ItBodyPart', '', '', '3ItBodyChip'],
+      // foot
+      ['3ItFootPart', '', '', '3ItFootChip'],
+      // saber
+      ['3ItSaber'],
+    ],
+    'e': [
+      [['3ItSubtank1', '3ItSubtank2', '3ItSubtank3', '3ItSubtank4']]
+    ],
+    'b': [
+      [['3ItBusterAmmo1', '3ItBusterAmmo2', '3ItBusterAmmo3', '3ItBusterAmmo4', '3ItBusterAmmo5',]],
+      [['3ItBusterAttack100', '3ItBusterAttack150',]],
+      [['3ItBusterFireRate3', '3ItBusterFireRate4', '3ItBusterFireRate5', '3ItBusterFireRate6', '3ItBusterFireRate30', '3ItBusterFireRate60',]],
+      [['3ItBusterDashShot1', '3ItBusterDashShotUnlimited',]],
+      [['3ItCharge75', '3ItCharge100', '3ItCharge125', '3ItCharge150',]],
+    ],
+    'subbosses': [
+      // vff/bit
+      ['3ItKeyVajurila'],
+      // mbb/byte
+      ['3ItKeyMandarela'],
+      // vava
+      ['3ItKeyVava'],
+    ],
+    'ridearmor': [
+      // f
+      ['3ItRideArmorF'],
+      // h
+      ['3ItRideArmorH'],
+      // k
+      ['3ItRideArmorK'],
+      // n
+      ['3ItRideArmorN'],
+    ],
+  },
+  'miscellaneous': {
+    'hp': [
+      [[
+        '1ItLifeUp1', '1ItLifeUp2', '1ItLifeUp3', '1ItLifeUp4', '1ItLifeUp5', '1ItLifeUp6', '1ItLifeUp7', '1ItLifeUp8',
+        '1ItLifeUpD1', '1ItLifeUpD2', '1ItLifeUpD3', '1ItLifeUpD4', '1ItLifeUpD5', '1ItLifeUpD6',
+        '2ItLifeUp1', '2ItLifeUp2', '2ItLifeUp3', '2ItLifeUp4', '2ItLifeUp5', '2ItLifeUp6', '2ItLifeUp7', '2ItLifeUp8',
+        '2ItLifeUpD1', '2ItLifeUpD2', '2ItLifeUpD3', '2ItLifeUpD4', '2ItLifeUpD5', '2ItLifeUpD6',
+        '3ItLifeUp1', '3ItLifeUp2', '3ItLifeUp3', '3ItLifeUp4', '3ItLifeUp5', '3ItLifeUp6', '3ItLifeUp7', '3ItLifeUp8',
+        '3ItLifeUpD1', '3ItLifeUpD2', '3ItLifeUpD3', '3ItLifeUpD4', '3ItLifeUpD5', '3ItLifeUpD6',
+      ]],
+    ],
+    'wp': [
+      [[
+        '1ItEnergyUp1', '1ItEnergyUp2', '1ItEnergyUp3', '1ItEnergyUp4', '1ItEnergyUp5', '1ItEnergyUp6', '1ItEnergyUp7', '1ItEnergyUp8', '1ItEnergyUp9', '1ItEnergyUp10', '1ItEnergyUp11', '1ItEnergyUp12', '1ItEnergyUp13', '1ItEnergyUp14',
+        '2ItEnergyUp1', '2ItEnergyUp2', '2ItEnergyUp3', '2ItEnergyUp4', '2ItEnergyUp5', '2ItEnergyUp6', '2ItEnergyUp7', '2ItEnergyUp8', '2ItEnergyUp9', '2ItEnergyUp10', '2ItEnergyUp11', '2ItEnergyUp12', '2ItEnergyUp13', '2ItEnergyUp14',
+        '3ItEnergyUp1', '3ItEnergyUp2', '3ItEnergyUp3', '3ItEnergyUp4', '3ItEnergyUp5', '3ItEnergyUp6', '3ItEnergyUp7', '3ItEnergyUp8', '3ItEnergyUp9', '3ItEnergyUp10', '3ItEnergyUp11', '3ItEnergyUp12', '3ItEnergyUp13', '3ItEnergyUp14',
+      ]]
+    ],
+    'sigma': [
+      [[
+        '1ItKeyS1', '1ItKeyS2', '1ItKeyS3', '1ItKeyS4', '1ItKeyS5', '1ItKeyS6', '1ItKeyS7', '1ItKeyS8', '1ItKeyS9', '1ItKeyS10', '1ItKeyS11', '1ItKeyS12', '1ItKeyS13',
+        '2ItKeyS1', '2ItKeyS2', '2ItKeyS3', '2ItKeyS4', '2ItKeyS5', '2ItKeyS6', '2ItKeyS7', '2ItKeyS8', '2ItKeyS9', '2ItKeyS10', '2ItKeyS11', '2ItKeyS12', '2ItKeyS13',
+        '3ItKeyS1', '3ItKeyS2', '3ItKeyS3', '3ItKeyS4', '3ItKeyS5', '3ItKeyS6', '3ItKeyS7', '3ItKeyS8', '3ItKeyS9', '3ItKeyS10', '3ItKeyS11', '3ItKeyS12', '3ItKeyS13', '3ItKeyS14',
+      ]]
+    ],
+    'd': [],
+    'igf': [['SIfg']],
+    'title': [['SCurrentGame']],
+  },
+}
+
 export interface X1ImgSource {
   bosses: string[]
   weapon: string[]

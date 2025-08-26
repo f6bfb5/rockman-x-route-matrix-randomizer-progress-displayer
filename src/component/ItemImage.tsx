@@ -12,7 +12,7 @@ function ItemImage(props: {
   // const chip = itemStatus() ? itemStatus()[3] : false
 
   return (
-    <div class="relative rounded-xl overflow-hidden">
+    <div class="p-[5%] relative overflow-hidden">
       <div
         class="aspect-square"
       // classList={{
@@ -21,7 +21,7 @@ function ItemImage(props: {
       >
         <img
           src={`${source}`}
-          class="relative w-[100%] h-[100%] object-contain align-middle"
+          class="relative w-[100%] h-[100%] object-contain align-middle rounded-xl"
           classList={{
             'grayscale': (itemStatus() ? !itemStatus()[0] : false) || (itemStatus() ? itemStatus()[1] : false),
           }}

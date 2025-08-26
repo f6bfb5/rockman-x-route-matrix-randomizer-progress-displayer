@@ -1,4 +1,6 @@
-import { createSignal, Switch, Match, onMount } from 'solid-js'
+import { createSignal, Show, onMount } from 'solid-js'
+import { Motion, Presence } from "solid-motionone"
+
 import { recordFilePath, initItemStatus } from './utils/variable'
 import parseText from './utils/parseText'
 
@@ -9,6 +11,7 @@ import Miscellaneous from "./component/Miscellaneous"
 
 function App() {
   const [itemStatus, setItemStatus] = createSignal(initItemStatus)
+  const [displayMode, setDisplayMode] = createSignal(0)
 
   async function fetchFile() {
     const text = await fetch(recordFilePath).then(r => r.text());
@@ -18,31 +21,74 @@ function App() {
   }
 
   onMount(() => {
-    setInterval(() => {
-      fetchFile()
-    }, 1000)
+    // setInterval(() => {
+    fetchFile()
+    // }, 1000)
   })
 
   return (
     <>
-      {/* <div class="grid-cols-8 grid-cols-9 grid-cols-10 bg-[url()]">
+      {/* <div class="grid-cols-8 grid-cols-9 grid-cols-10 grid-cols-[repeat(9,min(10vw,8vh))]">
         {itemStatus().x1.e[0]}
-      </div> */}
-      <Switch fallback={<></>}>
-        <Match when={itemStatus().miscellaneous.title[0] == 1}>
-          <X1 itemStatus={itemStatus().x1} />
-          <div class="mt-1"></div>
-        </Match>
-        <Match when={itemStatus().miscellaneous.title[0] == 2}>
-          <X2 itemStatus={itemStatus().x2} />
-          <div class="mt-1"></div>
-        </Match>
-        <Match when={itemStatus().miscellaneous.title[0] == 3}>
-          <X3 itemStatus={itemStatus().x3} />
-          <div class="mt-1"></div>
-        </Match>
-        <Miscellaneous itemStatus={itemStatus().miscellaneous} />
-      </Switch>
+        </div> */}
+      <div
+        onClick={() => setDisplayMode(displayMode() == 0 ? 1 : 0)}
+      // class="max-w-[720px] m-auto"
+      >
+        <Presence exitBeforeEnter>
+          {/* show all games */}
+          <Show when={displayMode() == 0}>
+            <Motion
+              initial={{ x: '100%' }}
+              animate={{ x: '0%' }}
+              exit={{ x: '100%' }}
+              transition={{ duration: 0.3, easing: "ease" }}
+            >
+              <X1 itemStatus={itemStatus().x1} />
+              <X2 itemStatus={itemStatus().x2} />
+              <X3 itemStatus={itemStatus().x3} />
+              <Miscellaneous itemStatus={itemStatus().miscellaneous} />
+            </Motion>
+          </Show>
+
+          {/* show by current game */}
+          <Show when={displayMode() == 1}>
+            <Show when={itemStatus().miscellaneous.title[0] == 1}>
+              <Motion
+                initial={{ x: '100%' }}
+                animate={{ x: '0%' }}
+                exit={{ x: '100%' }}
+                transition={{ duration: 0.3, easing: "ease" }}
+              >
+                <X1 itemStatus={itemStatus().x1} />
+                <Miscellaneous itemStatus={itemStatus().miscellaneous} />
+              </Motion>
+            </Show>
+            <Show when={itemStatus().miscellaneous.title[0] == 2}>
+              <Motion
+                initial={{ x: '100%' }}
+                animate={{ x: '0%' }}
+                exit={{ x: '100%' }}
+                transition={{ duration: 0.3, easing: "ease" }}
+              >
+                <X2 itemStatus={itemStatus().x2} />
+                <Miscellaneous itemStatus={itemStatus().miscellaneous} />
+              </Motion>
+            </Show>
+            <Show when={itemStatus().miscellaneous.title[0] == 3}>
+              <Motion
+                initial={{ x: '100%' }}
+                animate={{ x: '0%' }}
+                exit={{ x: '100%' }}
+                transition={{ duration: 0.3, easing: "ease" }}
+              >
+                <X3 itemStatus={itemStatus().x3} />
+                <Miscellaneous itemStatus={itemStatus().miscellaneous} />
+              </Motion>
+            </Show>
+          </Show>
+        </Presence >
+      </div>
     </>
   )
 }
