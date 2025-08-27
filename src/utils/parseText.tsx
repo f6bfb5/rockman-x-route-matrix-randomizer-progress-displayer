@@ -2,6 +2,7 @@ import { addressMapping } from '../utils/variable'
 
 function parseTextFile(text: string) {
   const lines = text.split('\n');
+
   const valueMap: { [key: string]: string } = {};
 
   lines.forEach(line => {

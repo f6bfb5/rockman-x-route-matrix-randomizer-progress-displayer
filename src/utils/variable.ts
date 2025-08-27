@@ -1,5 +1,5 @@
 export const imgBasePath = './progress_tracker_assets/'
-export const recordFilePath = './progress_report.txt'
+export const progressFilePath = './progress_report.txt'
 export const imgSourceObject = {
   'x1': {
     'bosses': [
@@ -150,9 +150,9 @@ export const initItemStatus = {
     ridearmor: Array(4).fill(0)
   },
   'miscellaneous': {
-    hp: Array(1).fill(0),
-    wp: Array(1).fill(0),
-    sigma: Array(1).fill(0),
+    hp: Array(3).fill(0),
+    wp: Array(3).fill(0),
+    sigma: Array(3).fill(0),
     d: Array(1).fill(0),
     igf: Array(1).fill(0),
     title: Array(1).fill(0),
@@ -162,51 +162,51 @@ export const addressMapping = {
   'x1': {
     'bosses': [
       // unlocked, beaten, changed
-      // lo
+      // lo ['0x030']
       ['1ItKeyLO', '1ChLOClear'],
-      // sc
+      // sc ['0x031', '0x039']
       ['1ItKeySC', '1ChSCClear', '1ItStageVariedSC'],
-      // aa
+      // aa ['0x032']
       ['1ItKeyAA', '1ChAAClear'],
-      // bn/fm
+      // bn/fm ['0x033', '0x03B']
       ['1ItKeyBN', '1ChBNClear', '1ItStageVariedBN'],
-      // se
+      // se ['0x034']
       ['1ItKeySE', '1ChSEClear'],
-      // sm
+      // sm ['0x035', '0x03D']
       ['1ItKeySM', '1ChSMClear', '1ItStageVariedSM'],
-      // bk
+      // bk ['0x036']
       ['1ItKeyBK', '1ChBKClear'],
-      // ip/cp
+      // ip/cp ['0x037']
       ['1ItKeyIP', '1ChIPClear']
     ],
     'weapon': [
-      // lo
+      // lo ['0x028']
       ['1ItWeaponLO'],
-      // sc
+      // sc ['0x029']
       ['1ItWeaponSC'],
-      // aa
+      // aa ['0x02A']
       ['1ItWeaponAA'],
-      // bn/fm
+      // bn/fm ['0x02B']
       ['1ItWeaponBN'],
-      // se
+      // se ['0x02C']
       ['1ItWeaponSE'],
-      // sm
+      // sm ['0x02D']
       ['1ItWeaponSM'],
-      // bk
+      // bk ['0x02E']
       ['1ItWeaponBK'],
-      // ip/cp
+      // ip/cp ['0x02F']
       ['1ItWeaponIP']
     ],
     'armor': [
-      // head
+      // head ['0x058']
       ['1ItHeadPart', '', '', '1ItHeadChip'],
-      // arm
+      // arm ['0x05A']
       ['1ItArmPart', '', '', '1ItArmChip'],
-      // body
+      // body ['0x05C']
       ['1ItBodyPart', '', '', '1ItBodyChip'],
-      // foot
+      // foot ['0x05E']
       ['1ItFootPart', '', '', '1ItFootChip'],
-      // hadou
+      // hadou ['0x050']
       ['1ItHadouken']
     ],
     'e': [
@@ -222,51 +222,51 @@ export const addressMapping = {
   },
   'x2': {
     'bosses': [
-      // mm
+      // mm ['0x130']
       ['2ItKeyMM', '2ChMMClear'],
-      // wh/ws
+      // wh/ws ['0x131']
       ['2ItKeyWH', '2ChWHClear'],
-      // bc
+      // bc ['0x132']
       ['2ItKeyBC', '2ChBCClear'],
-      // fs
+      // fs ['0x133']
       ['2ItKeyFS', '2ChFSClear'],
-      // mh/mc
+      // mh/mc ['0x134']
       ['2ItKeyMH', '2ChMHClear'],
-      // cm/cs
+      // cm/cs ['0x135']
       ['2ItKeyCM', '2ChCMClear'],
-      // so,oo
+      // so,oo ['0x136']
       ['2ItKeySO', '2ChSOClear'],
-      // wa/wg
+      // wa/wg ['0x137']
       ['2ItKeyWA', '2ChWAClear'],
     ],
     'weapon': [
-      // mm
+      // mm ['0x128']
       ['2ItWeaponMM'],
-      // wh/ws
+      // wh/ws ['0x129']
       ['2ItWeaponWH'],
-      // bc
+      // bc ['0x12A']
       ['2ItWeaponBC'],
-      // fs
+      // fs ['0x12B']
       ['2ItWeaponFS'],
-      // mh/mc
+      // mh/mc ['0x12C']
       ['2ItWeaponMH'],
-      // cm/cs
+      // cm/cs ['0x12D']
       ['2ItWeaponCM'],
-      // so,oo
+      // so,oo ['0x12E']
       ['2ItWeaponSO'],
-      // wa/wg
+      // wa/wg ['0x12F']
       ['2ItWeaponWA'],
     ],
     'armor': [
-      // head
+      // head ['0x158']
       ['2ItHeadPart', '', '', '2ItHeadChip'],
-      // arm
+      // arm ['0x15A']
       ['2ItArmPart', '', '', '2ItArmChip'],
-      // body
+      // body ['0x15C']
       ['2ItBodyPart', '', '', '2ItBodyChip'],
-      // foot
+      // foot ['0x15E']
       ['2ItFootPart', '', '', '2ItFootChip'],
-      // shoryu
+      // shoryu ['0x150']
       ['2ItShoryuken'],
     ],
     'e': [
@@ -280,61 +280,61 @@ export const addressMapping = {
       [['2ItCharge75', '2ItCharge100', '2ItCharge125', '2ItCharge150',]],
     ],
     'zero': [
-      // head
+      // head ['0x139']
       ['2ItZeroFHead'],
-      // body
+      // body ['0x13A']
       ['2ItZeroBody'],
-      // foot
+      // foot ['0x138']
       ['2ItZeroFoot'],
     ]
   },
   'x3': {
     'bosses': [
-      // eh/bh
+      // eh/bh ['0x230', '0x238']
       ['3ItKeyEH', '3ChEHClear', '3ItStageVariedEH'],
-      // fb/bb
+      // fb/bb ['0x231', '0x239']
       ['3ItKeyFB', '3ChFBClear', '3ItStageVariedFB'],
-      // gb
+      // gb ['0x232', '0x23A']
       ['3ItKeyGB', '3ChGBClear', '3ItStageVariedGB'],
-      // as/ts
+      // as/ts ['0x233']
       ['3ItKeyAS', '3ChASClear'],
-      // en/vc
+      // en/vc ['0x234']
       ['3ItKeyEN', '3ChENClear'],
-      // ss/cc
+      // ss/cc ['0x235']
       ['3ItKeySS', '3ChSSClear'],
-      // sm/tr
+      // sm/tr ['0x236']
       ['3ItKeySM', '3ChSMClear'],
-      // st/nt
+      // st/nt ['0x237']
       ['3ItKeyST', '3ChSTClear'],
     ],
     'weapon': [
-      // eh/bh
+      // eh/bh ['0x228']
       ['3ItWeaponEH'],
-      // fb/bb
+      // fb/bb ['0x229']
       ['3ItWeaponFB'],
-      // gb
+      // gb ['0x22A']
       ['3ItWeaponGB'],
-      // as/ts
+      // as/ts ['0x22B']
       ['3ItWeaponAS'],
-      // en/vc
+      // en/vc ['0x22C']
       ['3ItWeaponEN'],
-      // ss/cc
+      // ss/cc ['0x22D']
       ['3ItWeaponSS'],
-      // sm/tr
+      // sm/tr ['0x22E']
       ['3ItWeaponSM'],
-      // st/nt
+      // st/nt ['0x22F']
       ['3ItWeaponST'],
     ],
     'armor': [
-      // head
+      // head ['0x258']
       ['3ItHeadPart', '', '', '3ItHeadChip'],
-      // arm
+      // arm ['0x25A']
       ['3ItArmPart', '', '', '3ItArmChip'],
-      // body
+      // body ['0x25C']
       ['3ItBodyPart', '', '', '3ItBodyChip'],
-      // foot
+      // foot ['0x25E']
       ['3ItFootPart', '', '', '3ItFootChip'],
-      // saber
+      // saber ['0x250']
       ['3ItSaber'],
     ],
     'e': [
@@ -348,21 +348,21 @@ export const addressMapping = {
       [['3ItCharge75', '3ItCharge100', '3ItCharge125', '3ItCharge150',]],
     ],
     'subbosses': [
-      // vff/bit
-      ['3ItKeyVajurila'],
-      // mbb/byte
-      ['3ItKeyMandarela'],
-      // vava
-      ['3ItKeyVava'],
+      // vff/bit ['0x23D']
+      ['', '', '3ItKeyVajurila'],
+      // mbb/byte ['0x23E']
+      ['', '', '3ItKeyMandarela'],
+      // vava ['0x23C', '0x23F']
+      ['', '', '3ItKeyVava'],
     ],
     'ridearmor': [
-      // f
+      // f ['0x257']
       ['3ItRideArmorF'],
-      // h
+      // h ['0x256']
       ['3ItRideArmorH'],
-      // k
+      // k ['0x255']
       ['3ItRideArmorK'],
-      // n
+      // n ['0x254']
       ['3ItRideArmorN'],
     ],
   },
@@ -371,8 +371,12 @@ export const addressMapping = {
       [[
         '1ItLifeUp1', '1ItLifeUp2', '1ItLifeUp3', '1ItLifeUp4', '1ItLifeUp5', '1ItLifeUp6', '1ItLifeUp7', '1ItLifeUp8',
         '1ItLifeUpD1', '1ItLifeUpD2', '1ItLifeUpD3', '1ItLifeUpD4', '1ItLifeUpD5', '1ItLifeUpD6',
+      ]],
+      [[
         '2ItLifeUp1', '2ItLifeUp2', '2ItLifeUp3', '2ItLifeUp4', '2ItLifeUp5', '2ItLifeUp6', '2ItLifeUp7', '2ItLifeUp8',
         '2ItLifeUpD1', '2ItLifeUpD2', '2ItLifeUpD3', '2ItLifeUpD4', '2ItLifeUpD5', '2ItLifeUpD6',
+      ]],
+      [[
         '3ItLifeUp1', '3ItLifeUp2', '3ItLifeUp3', '3ItLifeUp4', '3ItLifeUp5', '3ItLifeUp6', '3ItLifeUp7', '3ItLifeUp8',
         '3ItLifeUpD1', '3ItLifeUpD2', '3ItLifeUpD3', '3ItLifeUpD4', '3ItLifeUpD5', '3ItLifeUpD6',
       ]],
@@ -380,14 +384,22 @@ export const addressMapping = {
     'wp': [
       [[
         '1ItEnergyUp1', '1ItEnergyUp2', '1ItEnergyUp3', '1ItEnergyUp4', '1ItEnergyUp5', '1ItEnergyUp6', '1ItEnergyUp7', '1ItEnergyUp8', '1ItEnergyUp9', '1ItEnergyUp10', '1ItEnergyUp11', '1ItEnergyUp12', '1ItEnergyUp13', '1ItEnergyUp14',
+      ]],
+      [[
         '2ItEnergyUp1', '2ItEnergyUp2', '2ItEnergyUp3', '2ItEnergyUp4', '2ItEnergyUp5', '2ItEnergyUp6', '2ItEnergyUp7', '2ItEnergyUp8', '2ItEnergyUp9', '2ItEnergyUp10', '2ItEnergyUp11', '2ItEnergyUp12', '2ItEnergyUp13', '2ItEnergyUp14',
+      ]],
+      [[
         '3ItEnergyUp1', '3ItEnergyUp2', '3ItEnergyUp3', '3ItEnergyUp4', '3ItEnergyUp5', '3ItEnergyUp6', '3ItEnergyUp7', '3ItEnergyUp8', '3ItEnergyUp9', '3ItEnergyUp10', '3ItEnergyUp11', '3ItEnergyUp12', '3ItEnergyUp13', '3ItEnergyUp14',
       ]]
     ],
     'sigma': [
       [[
         '1ItKeyS1', '1ItKeyS2', '1ItKeyS3', '1ItKeyS4', '1ItKeyS5', '1ItKeyS6', '1ItKeyS7', '1ItKeyS8', '1ItKeyS9', '1ItKeyS10', '1ItKeyS11', '1ItKeyS12', '1ItKeyS13',
+      ]],
+      [[
         '2ItKeyS1', '2ItKeyS2', '2ItKeyS3', '2ItKeyS4', '2ItKeyS5', '2ItKeyS6', '2ItKeyS7', '2ItKeyS8', '2ItKeyS9', '2ItKeyS10', '2ItKeyS11', '2ItKeyS12', '2ItKeyS13',
+      ]],
+      [[
         '3ItKeyS1', '3ItKeyS2', '3ItKeyS3', '3ItKeyS4', '3ItKeyS5', '3ItKeyS6', '3ItKeyS7', '3ItKeyS8', '3ItKeyS9', '3ItKeyS10', '3ItKeyS11', '3ItKeyS12', '3ItKeyS13', '3ItKeyS14',
       ]]
     ],
@@ -396,450 +408,238 @@ export const addressMapping = {
     'title': [['SCurrentGame']],
   },
 }
-// export const addressMapping = {
-//   'x1': {
-//     'bosses': [
-//       // lo
-//       ['0x030'],
-//       // sc
-//       ['0x031', '0x039'],
-//       // aa
-//       ['0x032'],
-//       // fm
-//       ['0x033', '0x03B'],
-//       // se
-//       ['0x034'],
-//       // sm
-//       ['0x035', '0x03D'],
-//       // bk
-//       ['0x036'],
-//       // cp
-//       ['0x037']
-//     ],
-//     'weapon': [
-//       // lo
-//       ['0x028'],
-//       // sc
-//       ['0x029'],
-//       // aa
-//       ['0x02A'],
-//       // fm
-//       ['0x02B'],
-//       // se
-//       ['0x02C'],
-//       // sm
-//       ['0x02D'],
-//       // bk
-//       ['0x02E'],
-//       // cp
-//       ['0x02F']
-//     ],
-//     'armor': [
-//       // head
-//       ['0x058'],
-//       // arm
-//       ['0x05A'],
-//       // body
-//       ['0x05C'],
-//       // foot
-//       ['0x05E'],
-//       // hadou
-//       ['0x050']
-//     ],
-//   },
-//   'x2': {
-//     'bosses': [
-//       // mm
-//       ['0x130'],
-//       // ws
-//       ['0x131'],
-//       // bc
-//       ['0x132'],
-//       // fs
-//       ['0x133'],
-//       // mc
-//       ['0x134'],
-//       // cs
-//       ['0x135'],
-//       // oo
-//       ['0x136'],
-//       // wg
-//       ['0x137'],
-//     ],
-//     'weapon': [
-//       // mm
-//       ['0x128'],
-//       // ws
-//       ['0x129'],
-//       // bc
-//       ['0x12A'],
-//       // fs
-//       ['0x12B'],
-//       // mc
-//       ['0x12C'],
-//       // cs
-//       ['0x12D'],
-//       // oo
-//       ['0x12E'],
-//       // wg
-//       ['0x12F'],
-//     ],
-//     'armor': [
-//       // head
-//       ['0x158'],
-//       // arm
-//       ['0x15A'],
-//       // body
-//       ['0x15C'],
-//       // foot
-//       ['0x15E'],
-//       // shoryu
-//       ['0x150'],
-//     ],
-//     'zero': [
-//       // head
-//       ['0x139'],
-//       // body
-//       ['0x13A'],
-//       // foot
-//       ['0x138'],
-//     ]
-//   },
-//   'x3': {
-//     'bosses': [
-//       // bh
-//       ['0x230', '0x238'],
-//       // bb
-//       ['0x231', '0x239'],
-//       // gb
-//       ['0x232', '0x23A'],
-//       // ts
-//       ['0x233'],
-//       // vc
-//       ['0x234'],
-//       // cc
-//       ['0x235'],
-//       // tr
-//       ['0x236'],
-//       // nt
-//       ['0x237'],
-//     ],
-//     'weapon': [
-//       // bh
-//       ['0x228'],
-//       // bb
-//       ['0x229'],
-//       // gb
-//       ['0x22A'],
-//       // ts
-//       ['0x22B'],
-//       // vc
-//       ['0x22C'],
-//       // cc
-//       ['0x22D'],
-//       // tr
-//       ['0x22E'],
-//       // nt
-//       ['0x22F'],
-//     ],
-//     'armor': [
-//       // head
-//       ['0x258'],
-//       // arm
-//       ['0x25A'],
-//       // body
-//       ['0x25C'],
-//       // foot
-//       ['0x25E'],
-//       // saber
-//       ['0x250'],
-//     ],
-//     'subbosses': [
-//       // bff
-//       ['0x23D'],
-//       // mbb
-//       ['0x23E'],
-//       // vava
-//       ['0x23C', '0x23F'],
-//     ],
-//     'ridearmor': [
-//       // f
-//       ['0x257'],
-//       // h
-//       ['0x256'],
-//       // k
-//       ['0x255'],
-//       // n
-//       ['0x254'],
-//     ],
-//   },
-//   'miscellaneous': {
-//     'hp': [
-//       ['0x000', '0x100', '0x200', '0x300'],
-//     ],
-//     'wp': [
-//       ['0x010', '0x110', '0x210', '0x310']
-//     ],
-//     'b': [
-//       ['0x060', '0x160', '0x260', '0x360']
-//     ],
-//     'ba': [
-//       ['0x065', '0x165', '0x265', '0x365',]
-//     ],
-//     'br': [
-//       ['0x068', '0x168', '0x268', '0x368',]
-//     ],
-//     'bd': [
-//       ['0x06E', '0x16E', '0x26E', '0x36E',]
-//     ],
-//     'bc': [
-//       ['0x070', '0x170', '0x270', '0x370',]
-//     ],
-//     'e': [
-//       ['0x024', '0x124', '0x224', '0x324',]
-//     ],
-//     'd': [],
-//     'igf': [],
-//     'sigma': [
-//       ['0x040', '0x140', '0x240', '0x340']
-//     ]
-//     ,
-//   },
-//   'title': ['']
-// }
 
-// TODO
 export const translationMapping = {
   'x1': {
     'bosses': [
       // unlocked, beaten, changed
       // lo
-      ['1ItKeyLO', '1ChLOClear'],
+      ['[1]鑰匙: 魚雷章魚', ''],
       // sc
-      ['1ItKeySC', '1ChSCClear', '1ItStageVariedSC'],
+      ['[1]鑰匙: 針刺變色龍', '', '[1]變化: 針刺變色龍 關卡變化'],
       // aa
-      ['1ItKeyAA', '1ChAAClear'],
+      ['[1]鑰匙: 裝甲犰狳', ''],
       // bn/fm
-      ['1ItKeyBN', '1ChBNClear', '1ItStageVariedBN'],
+      ['[1]鑰匙: 燃燒猛獁', '', '[1]變化: 燃燒猛獁 關卡變化'],
       // se
-      ['1ItKeySE', '1ChSEClear'],
+      ['[1]鑰匙: 暴風鐵鷹', ''],
       // sm
-      ['1ItKeySM', '1ChSMClear', '1ItStageVariedSM'],
+      ['[1]鑰匙: 火花山魈', '', '[1]變化: 火花山魈 關卡變化'],
       // bk
-      ['1ItKeyBK', '1ChBKClear'],
+      ['[1]鑰匙: 回力鏢鍬型蟲', ''],
       // ip/cp
-      ['1ItKeyIP', '1ChIPClear']
+      ['[1]鑰匙: 冰凍企鵝', '']
     ],
     'weapon': [
       // lo
-      ['1ItWeaponLO'],
+      ['[1]武器: 魚雷章魚'],
       // sc
-      ['1ItWeaponSC'],
+      ['[1]武器: 針刺變色龍'],
       // aa
-      ['1ItWeaponAA'],
+      ['[1]武器: 裝甲犰狳'],
       // bn/fm
-      ['1ItWeaponBN'],
+      ['[1]武器: 燃燒猛獁'],
       // se
-      ['1ItWeaponSE'],
+      ['[1]武器: 暴風鐵鷹'],
       // sm
-      ['1ItWeaponSM'],
+      ['[1]武器: 火花山魈'],
       // bk
-      ['1ItWeaponBK'],
+      ['[1]武器: 回力鏢鍬型蟲'],
       // ip/cp
-      ['1ItWeaponIP']
+      ['[1]武器: 冰凍企鵝']
     ],
     'armor': [
       // head
-      ['1ItHeadPart', '', '', '1ItHeadChip'],
+      ['[1]頭部裝備', '', '', ''],
       // arm
-      ['1ItArmPart', '', '', '1ItArmChip'],
+      ['[1]手部裝備', '', '', ''],
       // body
-      ['1ItBodyPart', '', '', '1ItBodyChip'],
+      ['[1]身體裝備', '', '', ''],
       // foot
-      ['1ItFootPart', '', '', '1ItFootChip'],
+      ['[1]腳部裝備', '', '', ''],
       // hadou
-      ['1ItHadouken']
+      ['[1]波動拳']
     ],
     'e': [
-      [['1ItSubtank1', '1ItSubtank2', '1ItSubtank3', '1ItSubtank4']]
+      [['[1]E罐', '[1]E罐', '[1]E罐', '[1]E罐']]
     ],
     'b': [
-      [['1ItBusterAmmo1', '1ItBusterAmmo2', '1ItBusterAmmo3', '1ItBusterAmmo4', '1ItBusterAmmo5',]],
-      [['1ItBusterAttack100', '1ItBusterAttack150',]],
-      [['1ItBusterFireRate3', '1ItBusterFireRate4', '1ItBusterFireRate5', '1ItBusterFireRate6', '1ItBusterFireRate30', '1ItBusterFireRate60',]],
-      [['1ItBusterDashShot1', '1ItBusterDashShotUnlimited',]],
-      [['1ItCharge75', '1ItCharge100', '1ItCharge125', '1ItCharge150',]],
+      [['[1]X飛彈數量上升', '[1]X飛彈數量上升', '[1]X飛彈數量上升', '[1]X飛彈數量上升', '[1]X飛彈數量上升',]],
+      [['[1]X飛彈威力強化', '[1]X飛彈威力強化',]],
+      [['[1]X飛彈連發速率強化', '[1]X飛彈連發速率強化', '[1]X飛彈連發速率強化', '[1]X飛彈連發速率強化', '[1]X飛彈連發速率強化', '[1]X飛彈連發速率強化',]],
+      [['[1]衝刺飛彈數量上升', '[1]衝刺飛彈數量上升',]],
+      [['[1]蓄力速度加快', '[1]蓄力速度加快', '[1]蓄力速度加快', '[1]蓄力速度加快',]],
     ],
   },
   'x2': {
     'bosses': [
       // mm
-      ['2ItKeyMM', '2ChMMClear'],
+      ['[2]鑰匙: 變型飛蛾', ''],
       // wh/ws
-      ['2ItKeyWH', '2ChWHClear'],
+      ['[2]鑰匙: 鋼索絲瓜', ''],
       // bc
-      ['2ItKeyBC', '2ChBCClear'],
+      ['[2]鑰匙: 泡沫螃蟹', ''],
       // fs
-      ['2ItKeyFS', '2ChFSClear'],
+      ['[2]鑰匙: 烈焰雄鹿', ''],
       // mh/mc
-      ['2ItKeyMH', '2ChMHClear'],
+      ['[2]鑰匙: 磁石蜈蚣', ''],
       // cm/cs
-      ['2ItKeyCM', '2ChCMClear'],
+      ['[2]鑰匙: 水晶蝸牛', ''],
       // so,oo
-      ['2ItKeySO', '2ChSOClear'],
+      ['[2]鑰匙: 音速鴕鳥', ''],
       // wa/wg
-      ['2ItKeyWA', '2ChWAClear'],
+      ['[2]鑰匙: 車輪短吻鱷', ''],
     ],
     'weapon': [
       // mm
-      ['2ItWeaponMM'],
+      ['[2]武器: 變型飛蛾'],
       // wh/ws
-      ['2ItWeaponWH'],
+      ['[2]武器: 鋼索絲瓜'],
       // bc
-      ['2ItWeaponBC'],
+      ['[2]武器: 泡沫螃蟹'],
       // fs
-      ['2ItWeaponFS'],
+      ['[2]武器: 烈焰雄鹿'],
       // mh/mc
-      ['2ItWeaponMH'],
+      ['[2]武器: 磁石蜈蚣'],
       // cm/cs
-      ['2ItWeaponCM'],
+      ['[2]武器: 水晶蝸牛'],
       // so,oo
-      ['2ItWeaponSO'],
+      ['[2]武器: 音速鴕鳥'],
       // wa/wg
-      ['2ItWeaponWA'],
+      ['[2]武器: 車輪短吻鱷'],
     ],
     'armor': [
       // head
-      ['2ItHeadPart', '', '', '2ItHeadChip'],
+      ['[2]頭部裝備', '', '', ''],
       // arm
-      ['2ItArmPart', '', '', '2ItArmChip'],
+      ['[2]手部裝備', '', '', ''],
       // body
-      ['2ItBodyPart', '', '', '2ItBodyChip'],
+      ['[2]身體裝備', '', '', ''],
       // foot
-      ['2ItFootPart', '', '', '2ItFootChip'],
+      ['[2]腳部裝備', '', '', ''],
       // shoryu
-      ['2ItShoryuken'],
+      ['[2]昇龍拳'],
     ],
     'e': [
-      [['2ItSubtank1', '2ItSubtank2', '2ItSubtank3', '2ItSubtank4']]
+      [['[2]E罐', '[2]E罐', '[2]E罐', '[2]E罐']]
     ],
     'b': [
-      [['2ItBusterAmmo1', '2ItBusterAmmo2', '2ItBusterAmmo3', '2ItBusterAmmo4', '2ItBusterAmmo5',]],
-      [['2ItBusterAttack100', '2ItBusterAttack150',]],
-      [['2ItBusterFireRate3', '2ItBusterFireRate4', '2ItBusterFireRate5', '2ItBusterFireRate6', '2ItBusterFireRate30', '2ItBusterFireRate60',]],
-      [['2ItBusterDashShot1', '2ItBusterDashShotUnlimited',]],
-      [['2ItCharge75', '2ItCharge100', '2ItCharge125', '2ItCharge150',]],
+      [['[2]X飛彈數量上升', '[2]X飛彈數量上升', '[2]X飛彈數量上升', '[2]X飛彈數量上升', '[2]X飛彈數量上升',]],
+      [['[2]X飛彈威力強化', '[2]X飛彈威力強化',]],
+      [['[2]X飛彈連發速率強化', '[2]X飛彈連發速率強化', '[2]X飛彈連發速率強化', '[2]X飛彈連發速率強化', '[2]X飛彈連發速率強化', '[2]X飛彈連發速率強化',]],
+      [['[2]衝刺飛彈數量上升', '[2]衝刺飛彈數量上升',]],
+      [['[2]蓄力速度加快', '[2]蓄力速度加快', '[2]蓄力速度加快', '[2]蓄力速度加快',]],
     ],
     'zero': [
       // head
-      ['2ItZeroFHead'],
+      ['[2]傑洛腳部零件'],
       // body
-      ['2ItZeroBody'],
+      ['[2]傑洛頭部零件'],
       // foot
-      ['2ItZeroFoot'],
+      ['[2]傑洛身體零件'],
     ]
   },
   'x3': {
     'bosses': [
       // eh/bh
-      ['3ItKeyEH', '3ChEHClear', '3ItStageVariedEH'],
+      ['[3]鑰匙: 爆破黃蜂', '', '[3]變化: 爆破黃蜂 關卡變化'],
       // fb/bb
-      ['3ItKeyFB', '3ChFBClear', '3ItStageVariedFB'],
+      ['[3]鑰匙: 冰凍水牛', '', '[3]變化: 冰凍水牛 關卡變化'],
       // gb
-      ['3ItKeyGB', '3ChGBClear', '3ItStageVariedGB'],
+      ['[3]鑰匙: 重力獨角仙', '', '[3]變化: 重力獨角仙 關卡變化'],
       // as/ts
-      ['3ItKeyAS', '3ChASClear'],
+      ['[3]鑰匙: 酸性海馬', ''],
       // en/vc
-      ['3ItKeyEN', '3ChENClear'],
+      ['[3]鑰匙: 電氣鯰魚', ''],
       // ss/cc
-      ['3ItKeySS', '3ChSSClear'],
+      ['[3]鑰匙: 剪刀蝦', ''],
       // sm/tr
-      ['3ItKeySM', '3ChSMClear'],
+      ['[3]鑰匙: 螺旋犀牛', ''],
       // st/nt
-      ['3ItKeyST', '3ChSTClear'],
+      ['[3]鑰匙: 閃光虎', ''],
     ],
     'weapon': [
       // eh/bh
-      ['3ItWeaponEH'],
+      ['[3]武器: 爆破黃蜂'],
       // fb/bb
-      ['3ItWeaponFB'],
+      ['[3]武器: 冰凍水牛'],
       // gb
-      ['3ItWeaponGB'],
+      ['[3]武器: 重力獨角仙'],
       // as/ts
-      ['3ItWeaponAS'],
+      ['[3]武器: 酸性海馬'],
       // en/vc
-      ['3ItWeaponEN'],
+      ['[3]武器: 電氣鯰魚'],
       // ss/cc
-      ['3ItWeaponSS'],
+      ['[3]武器: 剪刀蝦'],
       // sm/tr
-      ['3ItWeaponSM'],
+      ['[3]武器: 螺旋犀牛'],
       // st/nt
-      ['3ItWeaponST'],
+      ['[3]武器: 閃光虎'],
     ],
     'armor': [
       // head
-      ['3ItHeadPart', '', '', '3ItHeadChip'],
+      ['[3]頭部裝備', '', '', '3ItHeadChip'],
       // arm
-      ['3ItArmPart', '', '', '3ItArmChip'],
+      ['[3]手部裝備', '', '', '3ItArmChip'],
       // body
-      ['3ItBodyPart', '', '', '3ItBodyChip'],
+      ['[3]身體裝備', '', '', '3ItBodyChip'],
       // foot
-      ['3ItFootPart', '', '', '3ItFootChip'],
+      ['[3]腳部裝備', '', '', '3ItFootChip'],
       // saber
-      ['3ItSaber'],
+      ['[3]Z光束刀'],
     ],
     'e': [
-      [['3ItSubtank1', '3ItSubtank2', '3ItSubtank3', '3ItSubtank4']]
+      [['[3]E罐', '[3]E罐', '[3]E罐', '[3]E罐']]
     ],
     'b': [
-      [['3ItBusterAmmo1', '3ItBusterAmmo2', '3ItBusterAmmo3', '3ItBusterAmmo4', '3ItBusterAmmo5',]],
-      [['3ItBusterAttack100', '3ItBusterAttack150',]],
-      [['3ItBusterFireRate3', '3ItBusterFireRate4', '3ItBusterFireRate5', '3ItBusterFireRate6', '3ItBusterFireRate30', '3ItBusterFireRate60',]],
-      [['3ItBusterDashShot1', '3ItBusterDashShotUnlimited',]],
-      [['3ItCharge75', '3ItCharge100', '3ItCharge125', '3ItCharge150',]],
+      [['[3]X飛彈數量上升', '[3]X飛彈數量上升', '[3]X飛彈數量上升', '[3]X飛彈數量上升', '[3]X飛彈數量上升',]],
+      [['[3]X飛彈威力強化', '[3]X飛彈威力強化',]],
+      [['[3]X飛彈連發速率強化', '[3]X飛彈連發速率強化', '[3]X飛彈連發速率強化', '[3]X飛彈連發速率強化', '[3]X飛彈連發速率強化', '[3]X飛彈連發速率強化',]],
+      [['[3]衝刺飛彈數量上升', '[3]衝刺飛彈數量上升',]],
+      [['[3]蓄力速度加快', '[3]蓄力速度加快', '[3]蓄力速度加快', '[3]蓄力速度加快',]],
     ],
     'subbosses': [
       // vff/bit
-      ['3ItKeyVajurila'],
+      ['', '', '[3]變化: 擊殺瓦傑里拉FF'],
       // mbb/byte
-      ['3ItKeyMandarela'],
+      ['', '', '[3]變化: 擊殺曼達雷拉BB'],
       // vava
-      ['3ItKeyVava'],
+      ['[3]鑰匙: 霸法', '', '[3]變化: 擊殺霸法'],
     ],
     'ridearmor': [
       // f
-      ['3ItRideArmorF'],
+      ['[3]騎乘裝甲-F-雨蛙號'],
       // h
-      ['3ItRideArmorH'],
+      ['[3]騎乘裝甲-H-飛鷹號'],
       // k
-      ['3ItRideArmorK'],
+      ['[3]騎乘裝甲-K-袋鼠號'],
       // n
-      ['3ItRideArmorN'],
+      ['[3]騎乘裝甲-N-嵌合獸號'],
     ],
   },
   'miscellaneous': {
     'hp': [
       [[
-        '1ItLifeUp1', '1ItLifeUp2', '1ItLifeUp3', '1ItLifeUp4', '1ItLifeUp5', '1ItLifeUp6', '1ItLifeUp7', '1ItLifeUp8',
-        '1ItLifeUpD1', '1ItLifeUpD2', '1ItLifeUpD3', '1ItLifeUpD4', '1ItLifeUpD5', '1ItLifeUpD6',
-        '2ItLifeUp1', '2ItLifeUp2', '2ItLifeUp3', '2ItLifeUp4', '2ItLifeUp5', '2ItLifeUp6', '2ItLifeUp7', '2ItLifeUp8',
-        '2ItLifeUpD1', '2ItLifeUpD2', '2ItLifeUpD3', '2ItLifeUpD4', '2ItLifeUpD5', '2ItLifeUpD6',
-        '3ItLifeUp1', '3ItLifeUp2', '3ItLifeUp3', '3ItLifeUp4', '3ItLifeUp5', '3ItLifeUp6', '3ItLifeUp7', '3ItLifeUp8',
-        '3ItLifeUpD1', '3ItLifeUpD2', '3ItLifeUpD3', '3ItLifeUpD4', '3ItLifeUpD5', '3ItLifeUpD6',
+        '[1]生命提升', '[1]生命提升', '[1]生命提升', '[1]生命提升', '[1]生命提升', '[1]生命提升', '[1]生命提升', '[1]生命提升',
+        '[1]生命提升', '[1]生命提升', '[1]生命提升', '[1]生命提升', '[1]生命提升', '[1]生命提升',
+        '[2]生命提升', '[2]生命提升', '[2]生命提升', '[2]生命提升', '[2]生命提升', '[2]生命提升', '[2]生命提升', '[2]生命提升',
+        '[2]生命提升', '[2]生命提升', '[2]生命提升', '[2]生命提升', '[2]生命提升', '[2]生命提升',
+        '[3]生命提升', '[3]生命提升', '[3]生命提升', '[3]生命提升', '[3]生命提升', '[3]生命提升', '[3]生命提升', '[3]生命提升',
+        '[3]生命提升', '[3]生命提升', '[3]生命提升', '[3]生命提升', '[3]生命提升', '[3]生命提升',
       ]],
     ],
     'wp': [
       [[
-        '1ItEnergyUp1', '1ItEnergyUp2', '1ItEnergyUp3', '1ItEnergyUp4', '1ItEnergyUp5', '1ItEnergyUp6', '1ItEnergyUp7', '1ItEnergyUp8', '1ItEnergyUp9', '1ItEnergyUp10', '1ItEnergyUp11', '1ItEnergyUp12', '1ItEnergyUp13', '1ItEnergyUp14',
-        '2ItEnergyUp1', '2ItEnergyUp2', '2ItEnergyUp3', '2ItEnergyUp4', '2ItEnergyUp5', '2ItEnergyUp6', '2ItEnergyUp7', '2ItEnergyUp8', '2ItEnergyUp9', '2ItEnergyUp10', '2ItEnergyUp11', '2ItEnergyUp12', '2ItEnergyUp13', '2ItEnergyUp14',
-        '3ItEnergyUp1', '3ItEnergyUp2', '3ItEnergyUp3', '3ItEnergyUp4', '3ItEnergyUp5', '3ItEnergyUp6', '3ItEnergyUp7', '3ItEnergyUp8', '3ItEnergyUp9', '3ItEnergyUp10', '3ItEnergyUp11', '3ItEnergyUp12', '3ItEnergyUp13', '3ItEnergyUp14',
+        '[1]能源提升', '[1]能源提升', '[1]能源提升', '[1]能源提升', '[1]能源提升', '[1]能源提升', '[1]能源提升', '[1]能源提升', '[1]能源提升', '[1]能源提升', '[1]能源提升', '[1]能源提升', '[1]能源提升', '[1]能源提升',
+        '[2]能源提升', '[2]能源提升', '[2]能源提升', '[2]能源提升', '[2]能源提升', '[2]能源提升', '[2]能源提升', '[2]能源提升', '[2]能源提升', '[2]能源提升', '[2]能源提升', '[2]能源提升', '[2]能源提升', '[2]能源提升',
+        '[3]能源提升', '[3]能源提升', '[3]能源提升', '[3]能源提升', '[3]能源提升', '[3]能源提升', '[3]能源提升', '[3]能源提升', '[3]能源提升', '[3]能源提升', '[3]能源提升', '[3]能源提升', '[3]能源提升', '[3]能源提升',
       ]]
     ],
     'sigma': [
       [[
-        '1ItKeyS1', '1ItKeyS2', '1ItKeyS3', '1ItKeyS4', '1ItKeyS5', '1ItKeyS6', '1ItKeyS7', '1ItKeyS8', '1ItKeyS9', '1ItKeyS10', '1ItKeyS11', '1ItKeyS12', '1ItKeyS13',
-        '2ItKeyS1', '2ItKeyS2', '2ItKeyS3', '2ItKeyS4', '2ItKeyS5', '2ItKeyS6', '2ItKeyS7', '2ItKeyS8', '2ItKeyS9', '2ItKeyS10', '2ItKeyS11', '2ItKeyS12', '2ItKeyS13',
-        '3ItKeyS1', '3ItKeyS2', '3ItKeyS3', '3ItKeyS4', '3ItKeyS5', '3ItKeyS6', '3ItKeyS7', '3ItKeyS8', '3ItKeyS9', '3ItKeyS10', '3ItKeyS11', '3ItKeyS12', '3ItKeyS13', '3ItKeyS14',
+        '[1]西格瑪鑰匙', '[1]西格瑪鑰匙', '[1]西格瑪鑰匙', '[1]西格瑪鑰匙', '[1]西格瑪鑰匙', '[1]西格瑪鑰匙', '[1]西格瑪鑰匙', '[1]西格瑪鑰匙', '[1]西格瑪鑰匙', '[1]西格瑪鑰匙', '[1]西格瑪鑰匙', '[1]西格瑪鑰匙', '[1]西格瑪鑰匙',
+        '[2]西格瑪鑰匙', '[2]西格瑪鑰匙', '[2]西格瑪鑰匙', '[2]西格瑪鑰匙', '[2]西格瑪鑰匙', '[2]西格瑪鑰匙', '[2]西格瑪鑰匙', '[2]西格瑪鑰匙', '[2]西格瑪鑰匙', '[2]西格瑪鑰匙', '[2]西格瑪鑰匙', '[2]西格瑪鑰匙', '[2]西格瑪鑰匙',
+        '[3]西格瑪鑰匙', '[3]西格瑪鑰匙', '[3]西格瑪鑰匙', '[3]西格瑪鑰匙', '[3]西格瑪鑰匙', '[3]西格瑪鑰匙', '[3]西格瑪鑰匙', '[3]西格瑪鑰匙', '[3]西格瑪鑰匙', '[3]西格瑪鑰匙', '[3]西格瑪鑰匙', '[3]西格瑪鑰匙', '[3]西格瑪鑰匙', '[3]西格瑪鑰匙',
       ]]
     ],
     'd': [],

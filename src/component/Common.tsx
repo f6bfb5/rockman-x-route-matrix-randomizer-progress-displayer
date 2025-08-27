@@ -4,6 +4,7 @@ import { imgBasePath, imgSourceObject } from '../utils/variable'
 import GridContainer from './GridContainer'
 import ItemImage from './ItemImage'
 import Text from './Text'
+import TextAnimated from './TextAnimated'
 
 function Common(props: {
   children: number | boolean | Node | JSX.ArrayElement | (string & {}) | null | undefined,
@@ -83,17 +84,33 @@ function Common(props: {
         <div class="relative">
           <ItemImage source={`${imgBasePath}${e}`} />
           <div class="absolute size-[100%] left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] flex justify-center">
-            <Text text={itemStatus().e[0]} />
+            <TextAnimated text={itemStatus().e[0]} />
           </div>
         </div>
 
         {/* Buster */}
         <ItemImage source={`${imgBasePath}${b}`} />
-        <div class="relative size-[100%]">
+
+        {/* <div class="relative size-[100%]">
           <div class="absolute size-[100%] left-[100%] top-[50%] translate-y-[-50%] flex justify-center">
             <Text text={`${itemStatus().b[0]}/${itemStatus().b[1]}/${itemStatus().b[2]}/${itemStatus().b[3]}/${itemStatus().b[4]}`} />
           </div>
+        </div> */}
+
+        <div class="relative size-[100%]">
+          <div class="absolute size-[100%] left-[100%] top-[50%] translate-y-[-50%] flex justify-center">
+            <TextAnimated text={itemStatus().b[0]} />
+            <Text text={'/'} />
+            <TextAnimated text={itemStatus().b[1]} />
+            <Text text={'/'} />
+            <TextAnimated text={itemStatus().b[2]} />
+            <Text text={'/'} />
+            <TextAnimated text={itemStatus().b[3]} />
+            <Text text={'/'} />
+            <TextAnimated text={itemStatus().b[4]} />
+          </div>
         </div>
+
         {/* <div class="relative size-[100%]">
           <div class="absolute top-[-10%] size-[100%] flex flex-col items-center justify-center scale-[.5]">
             <Text text={`attack`} />

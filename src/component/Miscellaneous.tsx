@@ -3,7 +3,7 @@ import { imgBasePath, imgSourceObject } from '../utils/variable'
 
 import GridContainer from './GridContainer'
 import ItemImage from './ItemImage'
-import Text from './Text'
+import TextAnimated from './TextAnimated'
 
 import type { MiscellaneousItemStatus } from '../utils/variable'
 
@@ -20,7 +20,7 @@ function Miscellaneous(props: { itemStatus: MiscellaneousItemStatus, }) {
           <div class="relative">
             <ItemImage source={`${imgBasePath}${imgSource[miscItem]}`} />
             <div class="absolute size-[100%] left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] flex justify-center">
-              <Text text={itemStatus()[miscItem]} />
+              <TextAnimated text={itemStatus()[miscItem][0]} />
             </div>
           </div>
         }</For>

@@ -1,7 +1,7 @@
 import { createSignal, Show, onMount } from 'solid-js'
 import { Motion, Presence } from "solid-motionone"
 
-import { recordFilePath, initItemStatus } from './utils/variable'
+import { progressFilePath, initItemStatus } from './utils/variable'
 import parseText from './utils/parseText'
 
 import X1 from "./component/X1"
@@ -14,7 +14,9 @@ function App() {
   const [displayMode, setDisplayMode] = createSignal(0)
 
   async function fetchFile() {
-    const text = await fetch(recordFilePath).then(r => r.text());
+    // only on displaymode1&2
+    // rename to fetch progress?
+    const text = await fetch(progressFilePath).then(r => r.text());
     // setItemStatus(() => parseText(initItemStatus, text))
     setItemStatus({ ...parseText(initItemStatus, text) })
     return;
@@ -22,7 +24,7 @@ function App() {
 
   onMount(() => {
     setInterval(() => {
-    fetchFile()
+      fetchFile()
     }, 1000)
   })
 
