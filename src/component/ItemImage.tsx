@@ -46,13 +46,20 @@ function ItemImage(props: {
           fallback={<></>}
         >
           <Motion
+            animate={{ opacity: [0, 1], rotate: [120, 0], scale: [0, 1] }}
+            exit={{ opacity: [1, 0], rotate: [0, 120], scale: [1, 0] }}
+            transition={{
+              duration: 0.4,
+              easing: "ease"
+            }}
+            class="size-[50%] absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
               fill="url(#grad)"
               stroke="black"
-              class="size-[50%] absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]"
+              class="size-[100%]"
             >
               <defs>
                 <linearGradient id="grad" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -78,7 +85,7 @@ function ItemImage(props: {
         </Show>
       </Presence>
 
-      <div class="h-[33%] absolute top-[2.5%] right-[2.5%] flex">
+      <div class="h-[33%] absolute top-[5%] right-[5%] flex">
         {/* changed */}
         <Presence exitBeforeEnter>
           <Show
@@ -86,6 +93,12 @@ function ItemImage(props: {
             fallback={<></>}
           >
             <Motion
+              animate={{ opacity: [0, 1], rotate: [180, 0], scale: [0, 1] }}
+              exit={{ opacity: [1, 0], rotate: [0, 120], scale: [1, 0] }}
+              transition={{
+                duration: 0.4,
+                easing: "ease"
+              }}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

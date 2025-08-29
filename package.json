@@ -12,6 +12,7 @@
     "@tailwindcss/vite": "^4.1.12",
     "solid-js": "^1.9.8",
     "solid-motionone": "^1.0.4",
+    "solid-transition-group": "^0.3.0",
     "tailwindcss": "^4.1.12"
   },
   "devDependencies": {

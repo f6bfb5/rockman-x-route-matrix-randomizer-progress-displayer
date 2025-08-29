@@ -12,6 +12,7 @@ dist
 dist-ssr
 *.local
 public/progress_report.txt
+public/item_id_log.txt
 public/favicon.ico
 
 # Editor directories and files

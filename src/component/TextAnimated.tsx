@@ -18,7 +18,7 @@ function TextAnimated(props: { text: number }) {
   });
 
   return (
-    <div class="overflow-clip">
+    <div class="overflow-y-clip">
       <Presence exitBeforeEnter>
         <For each={items()}>
           {(item) => (

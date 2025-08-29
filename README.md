@@ -10,7 +10,7 @@
 2. 解壓縮到`boot.lua`所在的位置
 3. 在OBS的瀏覽器來源中勾選「本機檔案」，選擇`index.html`
 4. 尺寸（瀏覽器來源屬性內的寬度和高度）可依需求自行設定，圖示和文字大小會隨尺寸響應變化
-5. 如果有出現下方被截斷的情況，請視想使用的版位增加高度或縮減寬度
+5. 如果有出現下方被截斷的情況，請依使用的版位增加高度或縮減寬度
 
 ## 選項/options
 
@@ -23,7 +23,7 @@
   - ~~`1`：只顯示當前遊戲~~
   - ~~預設值：顯示所有遊戲~~
 
-對OBS的瀏覽器來源右鍵→點選「互動」→點擊視窗畫面，可切換目前/所有遊戲模式
+對OBS的瀏覽器來源右鍵→點選「互動」→點擊視窗畫面，可切換目前/所有遊戲/取得記錄模式
 
 ## library
 
@@ -31,8 +31,11 @@
 - TailwindCSS
 - [vite-plugin-singlefile - npm](https://www.npmjs.com/package/vite-plugin-singlefile)
 - solid-motionone
+- solid-transition-group
 - emfont
 - MuzaiPixel
+- FusionPixelFont12pxMono
+- [webで自動に長体をかける｜Solution - ソリューション｜株式会社イージェーワークス](https://www.ejworks.com/solution/detail.html?article_id=150)
 
 ## TODO
 
@@ -42,10 +45,14 @@
 - [ ] 設定
   - [v] 顯示所有遊戲內容
   - [v] 只顯示當前遊戲內容
-  - [ ] 顯示最後取得記錄
+  - [v] 顯示最後取得記錄
   - [ ] 單行式顯示
-- [v] 動畫效果
+- [ ] 動畫效果
+  - [v] Motion
+  - [ ] 微調
 - [x] recalculate aspect ratio
+- [ ] long click>slide to switch?
+- [ ] wheel to add/reduce display text line
 
 ## note
 

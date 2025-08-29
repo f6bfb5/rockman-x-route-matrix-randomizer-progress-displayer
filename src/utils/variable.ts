@@ -1,5 +1,6 @@
 export const imgBasePath = './progress_tracker_assets/'
 export const progressFilePath = './progress_report.txt'
+export const itemLogFilePath = './item_id_log.txt'
 export const imgSourceObject = {
   'x1': {
     'bosses': [
@@ -29,6 +30,11 @@ export const imgSourceObject = {
       'x1_x_foot.png',
       'x1_x_hadouken.png'
     ],
+    'sigma': 'sigma.png',
+    'hp': 'heart.png',
+    'wp': 'energy.png',
+    'e': 'etank.png',
+    'b': 'buster.png',
   },
   'x2': {
     'bosses': [
@@ -58,6 +64,11 @@ export const imgSourceObject = {
       'x2_x_foot.png',
       'x2_x_shoryuken.png'
     ],
+    'sigma': 'sigma.png',
+    'hp': 'heart.png',
+    'wp': 'energy.png',
+    'e': 'etank.png',
+    'b': 'buster.png',
     'zero': [
       'x2_zero_head.ico',
       'x2_zero_body.ico',
@@ -92,6 +103,11 @@ export const imgSourceObject = {
       'x3_x_foot.png',
       'x3_x_saber.png'
     ],
+    'sigma': 'sigma.png',
+    'hp': 'heart.png',
+    'wp': 'energy.png',
+    'e': 'etank.png',
+    'b': 'buster.png',
     'subbosses': [
       'x3_subbosses_bff.png',
       'x3_subbosses_mbb.png',
@@ -105,17 +121,17 @@ export const imgSourceObject = {
     ],
   },
   'miscellaneous': {
+    'sigma': 'sigma.png',
     'hp': 'heart.png',
     'wp': 'energy.png',
-    'b': 'buster.png',
-    'ba': 'buster_atk.png',
-    'bd': 'buster_dash.png',
-    'br': 'buster_rate.png',
-    'bc': 'buster_charge.gif',
     'e': 'etank.png',
+    'b': 'buster.png',
+    'ba': 'buster.png',
+    'bd': 'buster.png',
+    'br': 'buster.png',
+    'bc': 'buster.gif',
     'd': 'deaths.png',
     'igf': 'igf.png',
-    'sigma': 'sigma.png',
   },
   'title': {
     'x1': 'title_x1.ico',
@@ -129,6 +145,9 @@ export const initItemStatus = {
     bosses: Array(8).fill(0),
     weapon: Array(8).fill(0),
     armor: Array(5).fill(0),
+    sigma: Array(1).fill(0),
+    hp: Array(1).fill(0),
+    wp: Array(1).fill(0),
     e: Array(1).fill(0),
     b: Array(5).fill(0),
   },
@@ -136,6 +155,9 @@ export const initItemStatus = {
     bosses: Array(8).fill(0),
     weapon: Array(8).fill(0),
     armor: Array(5).fill(0),
+    sigma: Array(1).fill(0),
+    hp: Array(1).fill(0),
+    wp: Array(1).fill(0),
     e: Array(1).fill(0),
     b: Array(5).fill(0),
     zero: Array(3).fill(0)
@@ -144,15 +166,18 @@ export const initItemStatus = {
     bosses: Array(8).fill(0),
     weapon: Array(8).fill(0),
     armor: Array(5).fill(0),
+    sigma: Array(1).fill(0),
+    hp: Array(1).fill(0),
+    wp: Array(1).fill(0),
     e: Array(1).fill(0),
     b: Array(5).fill(0),
     subbosses: Array(3).fill(0),
     ridearmor: Array(4).fill(0)
   },
   'miscellaneous': {
-    hp: Array(3).fill(0),
-    wp: Array(3).fill(0),
-    sigma: Array(3).fill(0),
+    sigma: Array(1).fill(0),
+    hp: Array(1).fill(0),
+    wp: Array(1).fill(0),
     d: Array(1).fill(0),
     igf: Array(1).fill(0),
     title: Array(1).fill(0),
@@ -208,6 +233,22 @@ export const addressMapping = {
       ['1ItFootPart', '', '', '1ItFootChip'],
       // hadou ['0x050']
       ['1ItHadouken']
+    ],
+    'sigma': [
+      [[
+        '1ItKeyS1', '1ItKeyS2', '1ItKeyS3', '1ItKeyS4', '1ItKeyS5', '1ItKeyS6', '1ItKeyS7', '1ItKeyS8', '1ItKeyS9', '1ItKeyS10', '1ItKeyS11', '1ItKeyS12', '1ItKeyS13',
+      ]],
+    ],
+    'hp': [
+      [[
+        '1ItLifeUp1', '1ItLifeUp2', '1ItLifeUp3', '1ItLifeUp4', '1ItLifeUp5', '1ItLifeUp6', '1ItLifeUp7', '1ItLifeUp8',
+        '1ItLifeUpD1', '1ItLifeUpD2', '1ItLifeUpD3', '1ItLifeUpD4', '1ItLifeUpD5', '1ItLifeUpD6',
+      ]],
+    ],
+    'wp': [
+      [[
+        '1ItEnergyUp1', '1ItEnergyUp2', '1ItEnergyUp3', '1ItEnergyUp4', '1ItEnergyUp5', '1ItEnergyUp6', '1ItEnergyUp7', '1ItEnergyUp8', '1ItEnergyUp9', '1ItEnergyUp10', '1ItEnergyUp11', '1ItEnergyUp12', '1ItEnergyUp13', '1ItEnergyUp14',
+      ]],
     ],
     'e': [
       [['1ItSubtank1', '1ItSubtank2', '1ItSubtank3', '1ItSubtank4']]
@@ -268,6 +309,22 @@ export const addressMapping = {
       ['2ItFootPart', '', '', '2ItFootChip'],
       // shoryu ['0x150']
       ['2ItShoryuken'],
+    ],
+    'sigma': [
+      [[
+        '2ItKeyS1', '2ItKeyS2', '2ItKeyS3', '2ItKeyS4', '2ItKeyS5', '2ItKeyS6', '2ItKeyS7', '2ItKeyS8', '2ItKeyS9', '2ItKeyS10', '2ItKeyS11', '2ItKeyS12', '2ItKeyS13',
+      ]],
+    ],
+    'hp': [
+      [[
+        '2ItLifeUp1', '2ItLifeUp2', '2ItLifeUp3', '2ItLifeUp4', '2ItLifeUp5', '2ItLifeUp6', '2ItLifeUp7', '2ItLifeUp8',
+        '2ItLifeUpD1', '2ItLifeUpD2', '2ItLifeUpD3', '2ItLifeUpD4', '2ItLifeUpD5', '2ItLifeUpD6',
+      ]],
+    ],
+    'wp': [
+      [[
+        '2ItEnergyUp1', '2ItEnergyUp2', '2ItEnergyUp3', '2ItEnergyUp4', '2ItEnergyUp5', '2ItEnergyUp6', '2ItEnergyUp7', '2ItEnergyUp8', '2ItEnergyUp9', '2ItEnergyUp10', '2ItEnergyUp11', '2ItEnergyUp12', '2ItEnergyUp13', '2ItEnergyUp14',
+      ]],
     ],
     'e': [
       [['2ItSubtank1', '2ItSubtank2', '2ItSubtank3', '2ItSubtank4']]
@@ -337,6 +394,22 @@ export const addressMapping = {
       // saber ['0x250']
       ['3ItSaber'],
     ],
+    'sigma': [
+      [[
+        '3ItKeyS1', '3ItKeyS2', '3ItKeyS3', '3ItKeyS4', '3ItKeyS5', '3ItKeyS6', '3ItKeyS7', '3ItKeyS8', '3ItKeyS9', '3ItKeyS10', '3ItKeyS11', '3ItKeyS12', '3ItKeyS13', '3ItKeyS14',
+      ]]
+    ],
+    'hp': [
+      [[
+        '3ItLifeUp1', '3ItLifeUp2', '3ItLifeUp3', '3ItLifeUp4', '3ItLifeUp5', '3ItLifeUp6', '3ItLifeUp7', '3ItLifeUp8',
+        '3ItLifeUpD1', '3ItLifeUpD2', '3ItLifeUpD3', '3ItLifeUpD4', '3ItLifeUpD5', '3ItLifeUpD6',
+      ]],
+    ],
+    'wp': [
+      [[
+        '3ItEnergyUp1', '3ItEnergyUp2', '3ItEnergyUp3', '3ItEnergyUp4', '3ItEnergyUp5', '3ItEnergyUp6', '3ItEnergyUp7', '3ItEnergyUp8', '3ItEnergyUp9', '3ItEnergyUp10', '3ItEnergyUp11', '3ItEnergyUp12', '3ItEnergyUp13', '3ItEnergyUp14',
+      ]]
+    ],
     'e': [
       [['3ItSubtank1', '3ItSubtank2', '3ItSubtank3', '3ItSubtank4']]
     ],
@@ -353,7 +426,9 @@ export const addressMapping = {
       // mbb/byte ['0x23E']
       ['', '', '3ItKeyMandarela'],
       // vava ['0x23C', '0x23F']
-      ['', '', '3ItKeyVava'],
+      // 3ItKeyVavaStage
+      // need to fix
+      ['nil', '', '3ItKeyVava'],
     ],
     'ridearmor': [
       // f ['0x257']
@@ -367,40 +442,46 @@ export const addressMapping = {
     ],
   },
   'miscellaneous': {
+    'sigma': [
+      [[
+        '1ItKeyS1', '1ItKeyS2', '1ItKeyS3', '1ItKeyS4', '1ItKeyS5', '1ItKeyS6', '1ItKeyS7', '1ItKeyS8', '1ItKeyS9', '1ItKeyS10', '1ItKeyS11', '1ItKeyS12', '1ItKeyS13',
+        '2ItKeyS1', '2ItKeyS2', '2ItKeyS3', '2ItKeyS4', '2ItKeyS5', '2ItKeyS6', '2ItKeyS7', '2ItKeyS8', '2ItKeyS9', '2ItKeyS10', '2ItKeyS11', '2ItKeyS12', '2ItKeyS13',
+        '3ItKeyS1', '3ItKeyS2', '3ItKeyS3', '3ItKeyS4', '3ItKeyS5', '3ItKeyS6', '3ItKeyS7', '3ItKeyS8', '3ItKeyS9', '3ItKeyS10', '3ItKeyS11', '3ItKeyS12', '3ItKeyS13', '3ItKeyS14',
+      ]],
+      [[
+        "MItKeyS1", "MItKeyS2", "MItKeyS3", "MItKeyS4", "MItKeyS5", "MItKeyS6", "MItKeyS7", "MItKeyS8", "MItKeyS9", "MItKeyS10", "MItKeyS11", "MItKeyS12", "MItKeyS13",
+        "MItKeyS14", "MItKeyS15", "MItKeyS16", "MItKeyS17", "MItKeyS18", "MItKeyS19", "MItKeyS20", "MItKeyS21", "MItKeyS22", "MItKeyS23", "MItKeyS24", "MItKeyS25", "MItKeyS26",
+        "MItKeyS27", "MItKeyS28", "MItKeyS29", "MItKeyS30", "MItKeyS31", "MItKeyS32", "MItKeyS33", "MItKeyS34", "MItKeyS35", "MItKeyS36", "MItKeyS37", "MItKeyS38", "MItKeyS39", "MItKeyS40"
+      ]]
+    ],
     'hp': [
       [[
         '1ItLifeUp1', '1ItLifeUp2', '1ItLifeUp3', '1ItLifeUp4', '1ItLifeUp5', '1ItLifeUp6', '1ItLifeUp7', '1ItLifeUp8',
         '1ItLifeUpD1', '1ItLifeUpD2', '1ItLifeUpD3', '1ItLifeUpD4', '1ItLifeUpD5', '1ItLifeUpD6',
-      ]],
-      [[
         '2ItLifeUp1', '2ItLifeUp2', '2ItLifeUp3', '2ItLifeUp4', '2ItLifeUp5', '2ItLifeUp6', '2ItLifeUp7', '2ItLifeUp8',
         '2ItLifeUpD1', '2ItLifeUpD2', '2ItLifeUpD3', '2ItLifeUpD4', '2ItLifeUpD5', '2ItLifeUpD6',
-      ]],
-      [[
         '3ItLifeUp1', '3ItLifeUp2', '3ItLifeUp3', '3ItLifeUp4', '3ItLifeUp5', '3ItLifeUp6', '3ItLifeUp7', '3ItLifeUp8',
         '3ItLifeUpD1', '3ItLifeUpD2', '3ItLifeUpD3', '3ItLifeUpD4', '3ItLifeUpD5', '3ItLifeUpD6',
       ]],
+      [[
+        "MItLifeUp1", "MItLifeUp2", "MItLifeUp3", "MItLifeUp4", "MItLifeUp5", "MItLifeUp6", "MItLifeUp7", "MItLifeUp8",
+        "MItLifeUpD1", "MItLifeUpD2", "MItLifeUpD3", "MItLifeUpD4", "MItLifeUpD5", "MItLifeUpD6",
+        "MItLifeUp9", "MItLifeUp10", "MItLifeUp11", "MItLifeUp12", "MItLifeUp13", "MItLifeUp14", "MItLifeUp15", "MItLifeUp16",
+        "MItLifeUpD7", "MItLifeUpD8", "MItLifeUpD9", "MItLifeUpD10", "MItLifeUpD11", "MItLifeUpD12",
+        "MItLifeUp17", "MItLifeUp18", "MItLifeUp19", "MItLifeUp20", "MItLifeUp21", "MItLifeUp22", "MItLifeUp23", "MItLifeUp24",
+        "MItLifeUpD13", "MItLifeUpD14", "MItLifeUpD15", "MItLifeUpD16", "MItLifeUpD17", "MItLifeUpD18",
+      ]]
     ],
     'wp': [
       [[
         '1ItEnergyUp1', '1ItEnergyUp2', '1ItEnergyUp3', '1ItEnergyUp4', '1ItEnergyUp5', '1ItEnergyUp6', '1ItEnergyUp7', '1ItEnergyUp8', '1ItEnergyUp9', '1ItEnergyUp10', '1ItEnergyUp11', '1ItEnergyUp12', '1ItEnergyUp13', '1ItEnergyUp14',
-      ]],
-      [[
         '2ItEnergyUp1', '2ItEnergyUp2', '2ItEnergyUp3', '2ItEnergyUp4', '2ItEnergyUp5', '2ItEnergyUp6', '2ItEnergyUp7', '2ItEnergyUp8', '2ItEnergyUp9', '2ItEnergyUp10', '2ItEnergyUp11', '2ItEnergyUp12', '2ItEnergyUp13', '2ItEnergyUp14',
-      ]],
-      [[
         '3ItEnergyUp1', '3ItEnergyUp2', '3ItEnergyUp3', '3ItEnergyUp4', '3ItEnergyUp5', '3ItEnergyUp6', '3ItEnergyUp7', '3ItEnergyUp8', '3ItEnergyUp9', '3ItEnergyUp10', '3ItEnergyUp11', '3ItEnergyUp12', '3ItEnergyUp13', '3ItEnergyUp14',
-      ]]
-    ],
-    'sigma': [
-      [[
-        '1ItKeyS1', '1ItKeyS2', '1ItKeyS3', '1ItKeyS4', '1ItKeyS5', '1ItKeyS6', '1ItKeyS7', '1ItKeyS8', '1ItKeyS9', '1ItKeyS10', '1ItKeyS11', '1ItKeyS12', '1ItKeyS13',
       ]],
       [[
-        '2ItKeyS1', '2ItKeyS2', '2ItKeyS3', '2ItKeyS4', '2ItKeyS5', '2ItKeyS6', '2ItKeyS7', '2ItKeyS8', '2ItKeyS9', '2ItKeyS10', '2ItKeyS11', '2ItKeyS12', '2ItKeyS13',
-      ]],
-      [[
-        '3ItKeyS1', '3ItKeyS2', '3ItKeyS3', '3ItKeyS4', '3ItKeyS5', '3ItKeyS6', '3ItKeyS7', '3ItKeyS8', '3ItKeyS9', '3ItKeyS10', '3ItKeyS11', '3ItKeyS12', '3ItKeyS13', '3ItKeyS14',
+        "MItEnergyUp1", "MItEnergyUp2", "MItEnergyUp3", "MItEnergyUp4", "MItEnergyUp5", "MItEnergyUp6", "MItEnergyUp7", "MItEnergyUp8", "MItEnergyUp9", "MItEnergyUp10", "MItEnergyUp11", "MItEnergyUp12", "MItEnergyUp13", "MItEnergyUp14",
+        "MItEnergyUp15", "MItEnergyUp16", "MItEnergyUp17", "MItEnergyUp18", "MItEnergyUp19", "MItEnergyUp20", "MItEnergyUp21", "MItEnergyUp22", "MItEnergyUp23", "MItEnergyUp24", "MItEnergyUp25", "MItEnergyUp26", "MItEnergyUp27", "MItEnergyUp28",
+        "MItEnergyUp29", "MItEnergyUp30", "MItEnergyUp31", "MItEnergyUp32", "MItEnergyUp33", "MItEnergyUp34", "MItEnergyUp35", "MItEnergyUp36", "MItEnergyUp37", "MItEnergyUp38", "MItEnergyUp39", "MItEnergyUp40", "MItEnergyUp41", "MItEnergyUp42"
       ]]
     ],
     'd': [],
@@ -408,7 +489,6 @@ export const addressMapping = {
     'title': [['SCurrentGame']],
   },
 }
-
 export const translationMapping = {
   'x1': {
     'bosses': [
@@ -459,6 +539,22 @@ export const translationMapping = {
       ['[1]腳部裝備', '', '', ''],
       // hadou
       ['[1]波動拳']
+    ],
+    'hp': [
+      [[
+        '[1]生命提升', '[1]生命提升', '[1]生命提升', '[1]生命提升', '[1]生命提升', '[1]生命提升', '[1]生命提升', '[1]生命提升',
+        '[1]生命提升', '[1]生命提升', '[1]生命提升', '[1]生命提升', '[1]生命提升', '[1]生命提升',
+      ]],
+    ],
+    'wp': [
+      [[
+        '[1]能源提升', '[1]能源提升', '[1]能源提升', '[1]能源提升', '[1]能源提升', '[1]能源提升', '[1]能源提升', '[1]能源提升', '[1]能源提升', '[1]能源提升', '[1]能源提升', '[1]能源提升', '[1]能源提升', '[1]能源提升',
+      ]],
+    ],
+    'sigma': [
+      [[
+        '[1]西格瑪鑰匙', '[1]西格瑪鑰匙', '[1]西格瑪鑰匙', '[1]西格瑪鑰匙', '[1]西格瑪鑰匙', '[1]西格瑪鑰匙', '[1]西格瑪鑰匙', '[1]西格瑪鑰匙', '[1]西格瑪鑰匙', '[1]西格瑪鑰匙', '[1]西格瑪鑰匙', '[1]西格瑪鑰匙', '[1]西格瑪鑰匙',
+      ]],
     ],
     'e': [
       [['[1]E罐', '[1]E罐', '[1]E罐', '[1]E罐']]
@@ -520,6 +616,22 @@ export const translationMapping = {
       // shoryu
       ['[2]昇龍拳'],
     ],
+    'hp': [
+      [[
+        '[2]生命提升', '[2]生命提升', '[2]生命提升', '[2]生命提升', '[2]生命提升', '[2]生命提升', '[2]生命提升', '[2]生命提升',
+        '[2]生命提升', '[2]生命提升', '[2]生命提升', '[2]生命提升', '[2]生命提升', '[2]生命提升',
+      ]],
+    ],
+    'wp': [
+      [[
+        '[2]能源提升', '[2]能源提升', '[2]能源提升', '[2]能源提升', '[2]能源提升', '[2]能源提升', '[2]能源提升', '[2]能源提升', '[2]能源提升', '[2]能源提升', '[2]能源提升', '[2]能源提升', '[2]能源提升', '[2]能源提升',
+      ]],
+    ],
+    'sigma': [
+      [[
+        '[2]西格瑪鑰匙', '[2]西格瑪鑰匙', '[2]西格瑪鑰匙', '[2]西格瑪鑰匙', '[2]西格瑪鑰匙', '[2]西格瑪鑰匙', '[2]西格瑪鑰匙', '[2]西格瑪鑰匙', '[2]西格瑪鑰匙', '[2]西格瑪鑰匙', '[2]西格瑪鑰匙', '[2]西格瑪鑰匙', '[2]西格瑪鑰匙',
+      ]],
+    ],
     'e': [
       [['[2]E罐', '[2]E罐', '[2]E罐', '[2]E罐']]
     ],
@@ -578,15 +690,31 @@ export const translationMapping = {
     ],
     'armor': [
       // head
-      ['[3]頭部裝備', '', '', '3ItHeadChip'],
+      ['[3]頭部裝備', '', '', '[3]頭部裝備'],
       // arm
-      ['[3]手部裝備', '', '', '3ItArmChip'],
+      ['[3]手部裝備', '', '', '[3]手部裝備'],
       // body
-      ['[3]身體裝備', '', '', '3ItBodyChip'],
+      ['[3]身體裝備', '', '', '[3]身體裝備'],
       // foot
-      ['[3]腳部裝備', '', '', '3ItFootChip'],
+      ['[3]腳部裝備', '', '', '[3]腳部裝備'],
       // saber
       ['[3]Z光束刀'],
+    ],
+    'hp': [
+      [[
+        '[3]生命提升', '[3]生命提升', '[3]生命提升', '[3]生命提升', '[3]生命提升', '[3]生命提升', '[3]生命提升', '[3]生命提升',
+        '[3]生命提升', '[3]生命提升', '[3]生命提升', '[3]生命提升', '[3]生命提升', '[3]生命提升',
+      ]],
+    ],
+    'wp': [
+      [[
+        '[3]能源提升', '[3]能源提升', '[3]能源提升', '[3]能源提升', '[3]能源提升', '[3]能源提升', '[3]能源提升', '[3]能源提升', '[3]能源提升', '[3]能源提升', '[3]能源提升', '[3]能源提升', '[3]能源提升', '[3]能源提升',
+      ]]
+    ],
+    'sigma': [
+      [[
+        '[3]西格瑪鑰匙', '[3]西格瑪鑰匙', '[3]西格瑪鑰匙', '[3]西格瑪鑰匙', '[3]西格瑪鑰匙', '[3]西格瑪鑰匙', '[3]西格瑪鑰匙', '[3]西格瑪鑰匙', '[3]西格瑪鑰匙', '[3]西格瑪鑰匙', '[3]西格瑪鑰匙', '[3]西格瑪鑰匙', '[3]西格瑪鑰匙', '[3]西格瑪鑰匙',
+      ]]
     ],
     'e': [
       [['[3]E罐', '[3]E罐', '[3]E罐', '[3]E罐']]
@@ -619,32 +747,32 @@ export const translationMapping = {
   },
   'miscellaneous': {
     'hp': [
+      [],
       [[
-        '[1]生命提升', '[1]生命提升', '[1]生命提升', '[1]生命提升', '[1]生命提升', '[1]生命提升', '[1]生命提升', '[1]生命提升',
-        '[1]生命提升', '[1]生命提升', '[1]生命提升', '[1]生命提升', '[1]生命提升', '[1]生命提升',
-        '[2]生命提升', '[2]生命提升', '[2]生命提升', '[2]生命提升', '[2]生命提升', '[2]生命提升', '[2]生命提升', '[2]生命提升',
-        '[2]生命提升', '[2]生命提升', '[2]生命提升', '[2]生命提升', '[2]生命提升', '[2]生命提升',
-        '[3]生命提升', '[3]生命提升', '[3]生命提升', '[3]生命提升', '[3]生命提升', '[3]生命提升', '[3]生命提升', '[3]生命提升',
-        '[3]生命提升', '[3]生命提升', '[3]生命提升', '[3]生命提升', '[3]生命提升', '[3]生命提升',
-      ]],
+        "[*]生命提升", "[*]生命提升", "[*]生命提升", "[*]生命提升", "[*]生命提升", "[*]生命提升", "[*]生命提升", "[*]生命提升", "[*]生命提升", "[*]生命提升", "[*]生命提升", "[*]生命提升", "[*]生命提升", "[*]生命提升",
+        "[*]生命提升", "[*]生命提升", "[*]生命提升", "[*]生命提升", "[*]生命提升", "[*]生命提升", "[*]生命提升", "[*]生命提升", "[*]生命提升", "[*]生命提升", "[*]生命提升", "[*]生命提升", "[*]生命提升", "[*]生命提升",
+        "[*]生命提升", "[*]生命提升", "[*]生命提升", "[*]生命提升", "[*]生命提升", "[*]生命提升", "[*]生命提升", "[*]生命提升", "[*]生命提升", "[*]生命提升", "[*]生命提升", "[*]生命提升", "[*]生命提升", "[*]生命提升"
+      ]]
     ],
     'wp': [
+      [],
       [[
-        '[1]能源提升', '[1]能源提升', '[1]能源提升', '[1]能源提升', '[1]能源提升', '[1]能源提升', '[1]能源提升', '[1]能源提升', '[1]能源提升', '[1]能源提升', '[1]能源提升', '[1]能源提升', '[1]能源提升', '[1]能源提升',
-        '[2]能源提升', '[2]能源提升', '[2]能源提升', '[2]能源提升', '[2]能源提升', '[2]能源提升', '[2]能源提升', '[2]能源提升', '[2]能源提升', '[2]能源提升', '[2]能源提升', '[2]能源提升', '[2]能源提升', '[2]能源提升',
-        '[3]能源提升', '[3]能源提升', '[3]能源提升', '[3]能源提升', '[3]能源提升', '[3]能源提升', '[3]能源提升', '[3]能源提升', '[3]能源提升', '[3]能源提升', '[3]能源提升', '[3]能源提升', '[3]能源提升', '[3]能源提升',
+        "[*]能源提升", "[*]能源提升", "[*]能源提升", "[*]能源提升", "[*]能源提升", "[*]能源提升", "[*]能源提升", "[*]能源提升", "[*]能源提升", "[*]能源提升", "[*]能源提升", "[*]能源提升", "[*]能源提升", "[*]能源提升",
+        "[*]能源提升", "[*]能源提升", "[*]能源提升", "[*]能源提升", "[*]能源提升", "[*]能源提升", "[*]能源提升", "[*]能源提升", "[*]能源提升", "[*]能源提升", "[*]能源提升", "[*]能源提升", "[*]能源提升", "[*]能源提升",
+        "[*]能源提升", "[*]能源提升", "[*]能源提升", "[*]能源提升", "[*]能源提升", "[*]能源提升", "[*]能源提升", "[*]能源提升", "[*]能源提升", "[*]能源提升", "[*]能源提升", "[*]能源提升", "[*]能源提升", "[*]能源提升"
       ]]
     ],
     'sigma': [
+      [],
       [[
-        '[1]西格瑪鑰匙', '[1]西格瑪鑰匙', '[1]西格瑪鑰匙', '[1]西格瑪鑰匙', '[1]西格瑪鑰匙', '[1]西格瑪鑰匙', '[1]西格瑪鑰匙', '[1]西格瑪鑰匙', '[1]西格瑪鑰匙', '[1]西格瑪鑰匙', '[1]西格瑪鑰匙', '[1]西格瑪鑰匙', '[1]西格瑪鑰匙',
-        '[2]西格瑪鑰匙', '[2]西格瑪鑰匙', '[2]西格瑪鑰匙', '[2]西格瑪鑰匙', '[2]西格瑪鑰匙', '[2]西格瑪鑰匙', '[2]西格瑪鑰匙', '[2]西格瑪鑰匙', '[2]西格瑪鑰匙', '[2]西格瑪鑰匙', '[2]西格瑪鑰匙', '[2]西格瑪鑰匙', '[2]西格瑪鑰匙',
-        '[3]西格瑪鑰匙', '[3]西格瑪鑰匙', '[3]西格瑪鑰匙', '[3]西格瑪鑰匙', '[3]西格瑪鑰匙', '[3]西格瑪鑰匙', '[3]西格瑪鑰匙', '[3]西格瑪鑰匙', '[3]西格瑪鑰匙', '[3]西格瑪鑰匙', '[3]西格瑪鑰匙', '[3]西格瑪鑰匙', '[3]西格瑪鑰匙', '[3]西格瑪鑰匙',
+        "[*]西格瑪鑰匙", "[*]西格瑪鑰匙", "[*]西格瑪鑰匙", "[*]西格瑪鑰匙", "[*]西格瑪鑰匙", "[*]西格瑪鑰匙", "[*]西格瑪鑰匙", "[*]西格瑪鑰匙", "[*]西格瑪鑰匙", "[*]西格瑪鑰匙", "[*]西格瑪鑰匙", "[*]西格瑪鑰匙", "[*]西格瑪鑰匙",
+        "[*]西格瑪鑰匙", "[*]西格瑪鑰匙", "[*]西格瑪鑰匙", "[*]西格瑪鑰匙", "[*]西格瑪鑰匙", "[*]西格瑪鑰匙", "[*]西格瑪鑰匙", "[*]西格瑪鑰匙", "[*]西格瑪鑰匙", "[*]西格瑪鑰匙", "[*]西格瑪鑰匙", "[*]西格瑪鑰匙", "[*]西格瑪鑰匙",
+        "[*]西格瑪鑰匙", "[*]西格瑪鑰匙", "[*]西格瑪鑰匙", "[*]西格瑪鑰匙", "[*]西格瑪鑰匙", "[*]西格瑪鑰匙", "[*]西格瑪鑰匙", "[*]西格瑪鑰匙", "[*]西格瑪鑰匙", "[*]西格瑪鑰匙", "[*]西格瑪鑰匙", "[*]西格瑪鑰匙", "[*]西格瑪鑰匙", "[*]西格瑪鑰匙"
       ]]
     ],
-    'd': [],
-    'igf': [['SIfg']],
-    'title': [['SCurrentGame']],
+    'd': [[]],
+    'igf': [[]],
+    'title': [[]],
   },
 }
 

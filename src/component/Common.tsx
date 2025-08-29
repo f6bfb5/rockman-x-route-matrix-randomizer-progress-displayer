@@ -18,9 +18,6 @@ function Common(props: {
   }
   const imgSource = imgSourceMap[props.title]
 
-  const e = imgSourceObject.miscellaneous.e
-  const b = imgSourceObject.miscellaneous.b
-
   const titleMap: { [key: string]: string } = {
     'x1': imgSourceObject.title.x1,
     'x2': imgSourceObject.title.x2,
@@ -69,9 +66,6 @@ function Common(props: {
             itemStatus={itemStatus().weapon[i()]}
           />
         }</For>
-
-        {/* Children */}
-        {c()}
       </GridContainer >
 
       <GridContainer cols={'9'}>
@@ -80,23 +74,17 @@ function Common(props: {
           source={`${imgBasePath}${imgSource.armor[4]}`}
           itemStatus={itemStatus().armor[4]} />
 
-        {/* E Tank */}
-        <div class="relative">
-          <ItemImage source={`${imgBasePath}${e}`} />
-          <div class="absolute size-[100%] left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] flex justify-center">
-            <TextAnimated text={itemStatus().e[0]} />
+        <For each={['sigma', 'hp', 'wp', 'e'] as const}>{(miscItem) =>
+          <div class="relative">
+            <ItemImage source={`${imgBasePath}${imgSourceObject.miscellaneous[miscItem]}`} />
+            <div class="absolute size-[100%] left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] flex justify-center">
+              <TextAnimated text={itemStatus()[miscItem][0]} />
+            </div>
           </div>
-        </div>
+        }</For>
 
         {/* Buster */}
-        <ItemImage source={`${imgBasePath}${b}`} />
-
-        {/* <div class="relative size-[100%]">
-          <div class="absolute size-[100%] left-[100%] top-[50%] translate-y-[-50%] flex justify-center">
-            <Text text={`${itemStatus().b[0]}/${itemStatus().b[1]}/${itemStatus().b[2]}/${itemStatus().b[3]}/${itemStatus().b[4]}`} />
-          </div>
-        </div> */}
-
+        <ItemImage source={`${imgBasePath}${imgSourceObject.miscellaneous.b}`} />
         <div class="relative size-[100%]">
           <div class="absolute size-[100%] left-[100%] top-[50%] translate-y-[-50%] flex justify-center">
             <TextAnimated text={itemStatus().b[0]} />
@@ -117,6 +105,11 @@ function Common(props: {
             <Text text={`${itemStatus().b[0]}`} />
           </div>
         </div> */}
+      </GridContainer>
+
+      <GridContainer cols={9}>
+        {/* Children */}
+        {c()}
       </GridContainer>
     </>
   )
