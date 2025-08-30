@@ -154,9 +154,10 @@ function buildImageMap(addressMapping: { [key: string]: any }, imgSourceObject: 
           // 多層嵌套處理
           entry.forEach((nested, _j) => {
             if (Array.isArray(nested)) {
-              nested.forEach((key) => {
-                // console.log(key, imgItems)
-                if (imgItems != '') flatMap.set(key, imgItems);
+              nested.forEach((key, _k) => {
+                // console.log(key, i, _j, _k, imgItems)
+                if (Array.isArray(imgItems)) flatMap.set(key, imgItems[i])
+                if (imgItems != '' && !Array.isArray(imgItems)) flatMap.set(key, imgItems);
               });
             }
             else {
@@ -166,7 +167,7 @@ function buildImageMap(addressMapping: { [key: string]: any }, imgSourceObject: 
           });
         } else if (typeof entry === 'string') {
           const img = imgItems?.[i] ?? entry;
-          console.log(img)
+          // console.log(img)
           flatMap.set(entry, img);
         }
       });

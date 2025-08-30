@@ -1,6 +1,8 @@
 export const imgBasePath = './progress_tracker_assets/'
 export const progressFilePath = './progress_report.txt'
 export const itemLogFilePath = './item_id_log.txt'
+
+const bImgObject = ['b.png', 'ba.png', 'br.png', 'bd.png', 'bc.png']
 export const imgSourceObject = {
   'x1': {
     'bosses': [
@@ -34,7 +36,7 @@ export const imgSourceObject = {
     'hp': 'heart.png',
     'wp': 'energy.png',
     'e': 'etank.png',
-    'b': 'buster.png',
+    'b': bImgObject,
   },
   'x2': {
     'bosses': [
@@ -68,7 +70,7 @@ export const imgSourceObject = {
     'hp': 'heart.png',
     'wp': 'energy.png',
     'e': 'etank.png',
-    'b': 'buster.png',
+    'b': bImgObject,
     'zero': [
       'x2_zero_head.ico',
       'x2_zero_body.ico',
@@ -107,7 +109,7 @@ export const imgSourceObject = {
     'hp': 'heart.png',
     'wp': 'energy.png',
     'e': 'etank.png',
-    'b': 'buster.png',
+    'b': bImgObject,
     'subbosses': [
       'x3_subbosses_bff.png',
       'x3_subbosses_mbb.png',
@@ -124,12 +126,6 @@ export const imgSourceObject = {
     'sigma': 'sigma.png',
     'hp': 'heart.png',
     'wp': 'energy.png',
-    'e': 'etank.png',
-    'b': 'buster.png',
-    'ba': 'buster.png',
-    'bd': 'buster.png',
-    'br': 'buster.png',
-    'bc': 'buster.gif',
     'd': 'deaths.png',
     'igf': 'igf.png',
   },
@@ -426,9 +422,7 @@ export const addressMapping = {
       // mbb/byte ['0x23E']
       ['', '', '3ItKeyMandarela'],
       // vava ['0x23C', '0x23F']
-      // 3ItKeyVavaStage
-      // need to fix
-      ['nil', '', '3ItKeyVava'],
+      ['3ItKeyVavaStage', '', '3ItKeyVava'],
     ],
     'ridearmor': [
       // f ['0x257']
