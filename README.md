@@ -53,6 +53,7 @@
 - [x] recalculate aspect ratio
 - [ ] long click>slide to switch?
 - [ ] wheel to add/reduce display text line
+- [v] check source by crc to avoid redundant parse
 
 ## note
 

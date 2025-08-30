@@ -1,5 +1,6 @@
 import { createSignal, Show, onMount } from 'solid-js'
 import { Motion, Presence } from "solid-motionone"
+import { crc32 } from 'js-crc'
 
 import { progressFilePath, itemLogFilePath, initItemStatus } from './utils/variable'
 import { getNewItemStatus, getNewItemLogs } from './utils/parseText'
@@ -14,17 +15,30 @@ import ItemIconTextLine from './component/ItemIconTextLine'
 function App() {
   const [itemStatus, setItemStatus] = createSignal(initItemStatus)
   const [itemLogs, setItemLogs] = createSignal<string[][]>([])
-  const [displayMode, setDisplayMode] = createSignal(0)
+  const [displayMode, setDisplayMode] = createSignal(2)
+  const [fileCRC, setFileCRC] = createSignal(['', ''])
 
   async function fetchFile() {
     if (displayMode() == 0 || displayMode() == 1) {
       const newItemStatusLines = await fetch(progressFilePath).then(r => r.text())
-      // setItemStatus(() => parseText(initItemStatus, text))
-      setItemStatus({ ...getNewItemStatus(initItemStatus, newItemStatusLines) })
+
+      const newCRC = crc32(newItemStatusLines)
+      if (fileCRC()[0] != newCRC) {
+        setFileCRC([newCRC, fileCRC()[1]])
+        // setItemStatus(() => parseText(initItemStatus, text))
+        setItemStatus({ ...getNewItemStatus(initItemStatus, newItemStatusLines) })
+      }
+      // console.log(fileCRC(), newCRC)
     }
     if (displayMode() == 2) {
       const newItemLogsLines = await fetch(itemLogFilePath).then(r => r.text())
-      setItemLogs([...getNewItemLogs(newItemLogsLines)])
+
+      const newCRC = crc32(newItemLogsLines)
+      if (fileCRC()[1] != newCRC) {
+        setFileCRC([fileCRC()[0], newCRC])
+        setItemLogs([...getNewItemLogs(newItemLogsLines)])
+      }
+      // console.log(fileCRC(), newCRC)
     }
     return;
   }
