@@ -2,9 +2,13 @@
 
 ![screenshot](/screenshot.jpg)
 
+用於圖像化[Route MatriX Randomizer progress tracker](https://github.com/fsworld009/Route-MatriX-Randomizer_progress_tracker/)輸出的進度表網頁
+
 ## 事前準備/prerequisites
 
-用於圖像化[Route MatriX Randomizer progress tracker](https://github.com/fsworld009/Route-MatriX-Randomizer_progress_tracker/)輸出的進度表網頁
+- [Route MatriX Randomizer progress tracker](https://github.com/fsworld009/Route-MatriX-Randomizer_progress_tracker/)
+  - `progress_tracker/`
+  - `patched_boot.lua`
 
 ## 安裝方式
 
@@ -62,21 +66,21 @@ RouteMatriXRandomizer
 
 ## TODO
 
-- [v] 切換設定
-  - [x] 從網址params取得
-  - [v] 全畫面點擊
+- [x] 切換設定
+  - [ ] ~~從網址params取得~~
+  - [x] 全畫面點擊
 - [ ] 設定
-  - [v] 顯示所有遊戲內容
-  - [v] 只顯示當前遊戲內容
-  - [v] 顯示最後取得記錄
+  - [x] 顯示所有遊戲內容
+  - [x] 只顯示當前遊戲內容
+  - [x] 顯示最後取得記錄
   - [ ] 單行式顯示
 - [ ] 動畫效果
-  - [v] Motion
+  - [x] Motion
   - [ ] 微調
-- [x] recalculate aspect ratio
+- [ ] ~~recalculate aspect ratio~~
 - [ ] long click>slide to switch?
 - [ ] wheel to add/reduce display text line
-- [v] check source by crc to avoid redundant parse
+- [x] check source by crc to avoid redundant parse
 
 ## note
 
