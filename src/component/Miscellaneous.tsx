@@ -20,7 +20,7 @@ function Miscellaneous(props: { itemStatus: MiscellaneousItemStatus, }) {
           <div class="relative">
             <ItemImage source={`${imgBasePath}${imgSource[miscItem]}`} />
             <div class="absolute size-[100%] left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] flex justify-center">
-              <TextAnimated text={itemStatus()[miscItem][0]} />
+              <TextAnimated text={itemStatus()[miscItem][0].toString()} />
             </div>
           </div>
         }</For>

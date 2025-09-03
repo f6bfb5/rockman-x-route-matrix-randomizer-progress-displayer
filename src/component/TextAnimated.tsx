@@ -1,6 +1,6 @@
 import { createSignal, For, onMount, createEffect } from 'solid-js';
 import { Motion, Presence } from 'solid-motionone';
-import Text from './Text';
+// import Text from './Text';
 import Choootype from './Choootype';
 
 function TextAnimated(props: { text: string }) {

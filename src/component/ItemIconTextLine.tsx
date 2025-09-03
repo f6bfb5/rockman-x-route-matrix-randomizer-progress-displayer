@@ -15,19 +15,19 @@ function ItemIconTextLine(props: { lines: any[] }) {
     const prevLen = prev.length;
     const nextLen = newlines.length;
 
-    if (prevLen === 0) {
-      setItems(newlines);
-      setDisplayLines(newlines.slice(-linesToDisplay));
+    setItems(newlines)
+    if (prevLen === 0 || prevLen > nextLen) {
+      setDisplayLines(newlines.slice(-linesToDisplay))
       return;
     }
 
-    if (nextLen !== prevLen || JSON.stringify(prev) !== JSON.stringify(newlines)) {
-      const lenDelta = Math.max(0, nextLen - prevLen);
-      setItems(newlines);
+    if (prevLen < nextLen) {
+      const diff = newlines.slice(prevLen)
       setDisplayLines([
-        ...displayLines().slice(lenDelta),
-        ...newlines.slice(-lenDelta || -linesToDisplay)
-      ]);
+        ...displayLines().slice(diff.length - linesToDisplay),
+        ...diff
+      ])
+      return;
     }
   }
 
@@ -60,7 +60,7 @@ function ItemIconTextLine(props: { lines: any[] }) {
   return (
     <TransitionGroup moveClass="s-move">
       <For each={displayLines()}>
-        {(line) => (
+        {(line) => line[1] != '' && (
           // <Motion.div
           // initial={{ opacity: 0, x: 120, y: 120 }}
           //   animate={{ opacity: 1, x: 0, y: 0 }}

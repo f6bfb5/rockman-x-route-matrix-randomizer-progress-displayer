@@ -15,7 +15,7 @@ import ItemIconTextLine from './component/ItemIconTextLine'
 function App() {
   const [itemStatus, setItemStatus] = createSignal(initItemStatus)
   const [itemLogs, setItemLogs] = createSignal<string[][]>([])
-  const [displayMode, setDisplayMode] = createSignal(2)
+  const [displayMode, setDisplayMode] = createSignal(0)
   const [fileCRC, setFileCRC] = createSignal(['', ''])
 
   async function fetchFile() {

@@ -24,7 +24,7 @@ function ItemImage(props: {
           src={`${source}`}
           class="relative w-[100%] h-[100%] object-contain align-middle rounded-xl transition duration-600 ease"
           classList={{
-            'grayscale': (itemStatus() ? !itemStatus()[0] : false) || (itemStatus() ? itemStatus()[1] : false),
+            'grayscale': (itemStatus() ? !(itemStatus()[0] || isNaN(itemStatus()[0])) : false) || (itemStatus() ? itemStatus()[1] : false),
           }}
         />
       </div>
@@ -42,17 +42,17 @@ function ItemImage(props: {
       {/* unlocked */}
       <Presence exitBeforeEnter>
         <Show
-          when={(itemStatus() ? !itemStatus()[0] : false)}
+          when={(itemStatus() ? !(itemStatus()[0] || isNaN(itemStatus()[0])) : false)}
           fallback={<></>}
         >
           <Motion
-            animate={{ opacity: [0, 1], rotate: [120, 0], scale: [0, 1] }}
-            exit={{ opacity: [1, 0], rotate: [0, 120], scale: [1, 0] }}
+            animate={{ opacity: [0, 1], rotate: [120, 0], scale: [10, 1] }}
+            exit={{ opacity: [1, 0], rotate: [0, 120], scale: [1, 10] }}
             transition={{
-              duration: 0.4,
-              easing: "ease"
+              duration: 0.6,
+              easing: "ease-in-out"
             }}
-            class="size-[50%] absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]"
+            class="size-[75%] absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -63,8 +63,8 @@ function ItemImage(props: {
             >
               <defs>
                 <linearGradient id="grad" x1="0%" y1="0%" x2="0%" y2="100%">
-                  <stop offset="0%" stop-color="gold" />
-                  <stop offset="95%" stop-color="red" />
+                  <stop offset="0%" stop-color="red" />
+                  <stop offset="95%" stop-color="gold" />
                 </linearGradient>
                 <filter id="drop-shad">
                   <feOffset in="SourceAlpha" dx="1" dy="1" />
@@ -85,7 +85,7 @@ function ItemImage(props: {
         </Show>
       </Presence>
 
-      <div class="h-[33%] absolute top-[5%] right-[5%] flex">
+      <div class="h-[33%] absolute top-[4%] right-[6%] flex">
         {/* changed */}
         <Presence exitBeforeEnter>
           <Show
@@ -93,18 +93,19 @@ function ItemImage(props: {
             fallback={<></>}
           >
             <Motion
-              animate={{ opacity: [0, 1], rotate: [180, 0], scale: [0, 1] }}
-              exit={{ opacity: [1, 0], rotate: [0, 120], scale: [1, 0] }}
+              animate={{ opacity: [0, 1], rotate: [180, 0], scale: [10, 1] }}
+              exit={{ opacity: [1, 0], rotate: [0, 180], scale: [1, 10] }}
               transition={{
-                duration: 0.4,
-                easing: "ease"
+                duration: 0.6,
+                easing: "ease-in-out"
               }}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
-                fill="url(#grad)"
-                stroke="gold"
+                // fill="url(#grad)"
+                fill="white"
+                stroke="cyan"
                 class="size-[100%]"
                 filter="url(#drop-shad)"
               >

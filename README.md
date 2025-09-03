@@ -32,6 +32,7 @@
 - [vite-plugin-singlefile - npm](https://www.npmjs.com/package/vite-plugin-singlefile)
 - solid-motionone
 - solid-transition-group
+- js-crc
 - emfont
 - MuzaiPixel
 - FusionPixelFont12pxMono
