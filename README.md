@@ -10,7 +10,7 @@
   - `progress_tracker/`
   - `patched_boot.lua`
 
-## 安裝方式
+## 安裝方式/how to install
 
 1. 從Releases下載`RouteMatriXRandomizer_progress_displayer.zip`
 2. 解壓縮到`boot.lua`所在的位置
@@ -50,6 +50,7 @@ RouteMatriXRandomizer
   - ~~預設值：顯示所有遊戲~~
 
 對OBS的瀏覽器來源右鍵→點選「互動」→點擊視窗畫面，可切換目前/所有遊戲/取得記錄模式
+如果字體的窄體顯示效果不正確時，於互動中再次點擊畫面進行切換即可
 
 ## library
 
