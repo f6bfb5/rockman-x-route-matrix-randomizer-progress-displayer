@@ -65,6 +65,12 @@ RouteMatriXRandomizer
 
 note：舊版的OBS在執行時加上`--allow-file-access-from-files`標籤，較新版的使用`http://absolute/`取代`file:///`（例如：`http://absolute/C:/RouteMatriXRandomizer/RouteMatriXRandomizer_progress_displayer.html`），則或許也能達成？
 
+### Other ref
+
+- [obs-browser/README.md at master · obsproject/obs-browser](https://github.com/obsproject/obs-browser/blob/master/README.md#js-bindings)
+- [Browser Source | OBS](https://obsproject.com/kb/browser-source)
+- [OBS Studio ブラウザソース解説 - すたいるのOBS情報メモブログ](https://style1925.hateblo.jp/entry/obs-browser#%E3%83%9A%E3%83%BC%E3%82%B8%E6%A8%A9%E9%99%90)
+
 ## library
 
 - SolidJS
