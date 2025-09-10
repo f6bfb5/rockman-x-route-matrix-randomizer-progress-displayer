@@ -30,7 +30,7 @@ RouteMatriXRandomizer
 └── index.html (從「Release」解壓縮)
 ```
 
-若有其他想並用的記錄顯示網頁，只需將`index.html`更名為其他任意名稱，即可避免衝突
+若有其他想並用的記錄顯示網頁，只需將`index.html`更名為其他任意名稱（例如：`RouteMatriXRandomizer_progress_displayer.html`），即可避免衝突
 
 ## 使用方式/how to use
 
@@ -52,6 +52,18 @@ RouteMatriXRandomizer
 對OBS的瀏覽器來源右鍵→點選「互動」→點擊視窗畫面，可切換目前/所有遊戲/取得記錄模式
 
 如果字體的窄體顯示效果不正確時，於互動中再次點擊畫面進行切換即可
+
+## 運作原理/how does it work
+
+一般情況下，由於資訊安全上的原因，網頁無法直接存取本地的檔案，參照：[Reason: CORS request not HTTP - HTTP | MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS/Errors/CORSRequestNotHttp)
+
+會需要修改瀏覽器本身的資訊安全設定，或是自行建立一個本地伺服器，因此本專案的頁面在瀏覽器上直接開啟時會無法使用
+
+但在OBS上的瀏覽器來源使用「本機檔案」選擇時，則不會受到此限制，故可藉此達成讀取檔案顯示進度的功能
+
+然而若是想直接使用`file:///`（例如：`file:///C:/RouteMatriXRandomizer/RouteMatriXRandomizer_progress_displayer.html`）則仍會遇到CORS錯誤，故未採取上方原定的選項設定法
+
+note：舊版的OBS在執行時加上`--allow-file-access-from-files`標籤，較新版的使用`http://absolute/`取代`file:///`（例如：`http://absolute/C:/RouteMatriXRandomizer/RouteMatriXRandomizer_progress_displayer.html`），則或許也能達成？
 
 ## library
 
