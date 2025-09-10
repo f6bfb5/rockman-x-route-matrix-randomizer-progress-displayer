@@ -69,7 +69,7 @@ note：舊版的OBS在執行時加上`--allow-file-access-from-files`標籤，�
 
 - [obs-browser/README.md at master · obsproject/obs-browser](https://github.com/obsproject/obs-browser/blob/master/README.md#js-bindings)
 - [Browser Source | OBS](https://obsproject.com/kb/browser-source)
-- [OBS Studio ブラウザソース解説 - すたいるのOBS情報メモブログ](https://style1925.hateblo.jp/entry/obs-browser#%E3%83%9A%E3%83%BC%E3%82%B8%E6%A8%A9%E9%99%90)
+- [OBS Studio ブラウザソース解説 - すたいるのOBS情報メモブログ](https://style1925.hateblo.jp/entry/obs-browser#%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%ABHTML%E3%81%A7%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E7%94%BB%E5%83%8F%E3%81%8C%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%82%81%E3%81%AA%E3%81%84)
 
 ## library
 
