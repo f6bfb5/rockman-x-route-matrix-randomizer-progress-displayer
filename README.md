@@ -49,7 +49,7 @@ RouteMatriXRandomizer
   - ~~`1`：只顯示當前遊戲~~
   - ~~預設值：顯示所有遊戲~~
 
-對OBS的瀏覽器來源右鍵→點選「互動」→點擊視窗畫面，可切換目前/所有遊戲/取得記錄模式
+對OBS的瀏覽器來源右鍵→點選「互動」→點擊視窗畫面，可切換`目前遊戲`/`所有遊戲`/`取得記錄`模式
 
 如果字體的窄體顯示效果不正確時，於互動中再次點擊畫面進行切換即可
 
@@ -64,6 +64,25 @@ RouteMatriXRandomizer
 然而若是想直接使用`file:///`（例如：`file:///C:/RouteMatriXRandomizer/RouteMatriXRandomizer_progress_displayer.html`）則仍會遇到CORS錯誤，故未採取上方原定的選項設定法
 
 note：舊版的OBS在執行時加上`--allow-file-access-from-files`標籤，較新版的使用`http://absolute/`取代`file:///`（例如：`http://absolute/C:/RouteMatriXRandomizer/RouteMatriXRandomizer_progress_displayer.html`），則或許也能達成？
+
+### 如果我也想在自己玩的時候使用這類相關工具？
+
+你可以調降瀏覽器的安全設定，但鑑於日後因素並不大推薦
+
+稍微繞路一點，但調整上較簡單的方式，你可以
+
+#### 1. 架設本地伺服器
+
+1. 下載[Visual Studio Code - Code Editing. Redefined](https://code.visualstudio.com/)
+2. 安裝[Live Server - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+  a. 按下`Ctrl+Shift+P`
+  b. 移除提示命令欄內的`>`後，輸入`ext install ritwickdey.LiveServer`
+3. 按下`檔案`>`開啟資料夾`>開啟網頁所在資料夾
+4. 點選編輯器下方的「Go Live」
+
+#### 2. 安裝相關擴充功能（未檢驗）
+
+1. 下載[Polyglot-HTML-ZIP-PNG/util/web-extension at main · gildas-lormeau/Polyglot-HTML-ZIP-PNG](https://github.com/gildas-lormeau/Polyglot-HTML-ZIP-PNG/tree/main/util/web-extension)中的擴充功能並安裝
 
 ### Other ref
 
